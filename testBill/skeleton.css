@@ -21,11 +21,15 @@
 /* #Base 960 Grid
 ================================================== */
 
-    .container                                  { position: relative; width:1000px; margin: 0 auto; padding: 0; }
+    .container                                  { position: relative; width:100%; margin: 0 auto; padding: 0; }
+	.container1                                  { position: relative; width:98%; margin: 0 auto; padding: 0;  }
     .container .column,
-    .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
-    .row                                        { margin-bottom: 20px; }
-
+    .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px;  }
+    .container1 .column,
+    .container1 .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px;}
+    .row                                        { margin-bottom: 15px; }
+	
+    .row1                                        { margin-bottom: 5px; }
     /* Nested Column Classes */
     .column.alpha, .columns.alpha               { margin-left: 0; }
     .column.omega, .columns.omega               { margin-right: 0; }
@@ -51,6 +55,34 @@
 
     .container .one-third.column                { width: 300px; }
     .container .two-thirds.column               { width: 620px; }
+	
+	
+	
+	
+	.container1 .one.column,
+    .container1 .one.columns                     { width: 40px;  }
+    .container1 .two.columns                     { width: 100px; }
+    .container1 .three.columns                   { width: 160px; }
+    .container1 .four.columns                    { width: 220px; }
+    .container1 .five.columns                    { width: 280px; }
+    .container1 .six.columns                     { width: 340px; }
+    .container1 .seven.columns                   { width: 400px; }
+    .container1 .eight.columns                   { width: 460px; }
+    .container1 .nine.columns                    { width: 520px; }
+    .container1 .ten.columns                     { width: 580px; }
+    .container1 .eleven.columns                  { width: 640px; }
+    .container1 .twelve.columns                  { width: 700px; }
+    .container1 .thirteen.columns                { width: 760px; }
+    .container1 .fourteen.columns                { width: 820px; }
+    .container1 .fifteen.columns                 { width: 880px; }
+    .container1 .sixteen.columns                 { width: 940px; }
+
+    .container1 .one-third.column                { width: 300px; }
+    .container1 .two-thirds.column               { width: 620px; }
+	
+	
+	
+	
 
     /* Offsets */
     .container .offset-by-one                   { padding-left: 60px;  }
@@ -68,6 +100,27 @@
     .container .offset-by-thirteen              { padding-left: 780px; }
     .container .offset-by-fourteen              { padding-left: 840px; }
     .container .offset-by-fifteen               { padding-left: 900px; }
+
+
+
+
+
+    .container1 .offset-by-one                   { padding-left: 60px;  }
+    .container1 .offset-by-two                   { padding-left: 120px; }
+    .container1 .offset-by-three                 { padding-left: 180px; }
+    .container1 .offset-by-four                  { padding-left: 240px; }
+    .container1 .offset-by-five                  { padding-left: 300px; }
+    .container1 .offset-by-six                   { padding-left: 360px; }
+    .container1 .offset-by-seven                 { padding-left: 420px; }
+    .container1 .offset-by-eight                 { padding-left: 480px; }
+    .container1 .offset-by-nine                  { padding-left: 540px; }
+    .container1 .offset-by-ten                   { padding-left: 600px; }
+    .container1 .offset-by-eleven                { padding-left: 660px; }
+    .container1 .offset-by-twelve                { padding-left: 720px; }
+    .container1 .offset-by-thirteen              { padding-left: 780px; }
+    .container1 .offset-by-fourteen              { padding-left: 840px; }
+    .container1 .offset-by-fifteen               { padding-left: 900px; }
+
 
 
 

@@ -151,7 +151,7 @@ a:hover, a:active, a:focus, a {
 */}
 
 body{
-	font-size: 14px;
+	font-size: 12px;
 }
 h1, h2, h3, h4, p, a{
 	margin: 0;
@@ -173,7 +173,7 @@ h2{
 	line-height: 35px;
 }
 h3{
-	font-size: 20px;
+	font-size: 16px;
 	margin: 10px 0;
 	font-weight: 700;
 }
@@ -351,7 +351,7 @@ hr{
 	text-align: center;
 	position: fixed;
 	left: 20px;
-	top: 500px;
+	top: 440px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -676,6 +676,14 @@ iframe{
 	background: #666666;
 	color: #fff;
 }
+
+.rounded1 .dark_grey h1 {
+	background: #666666;
+	color: #fff;
+	font-size:18px;
+}
+
+
 .right{
 	float: right !important;
 }
@@ -776,7 +784,7 @@ margin-top: 10px;
 	float: left;
 }
 .rounded{
-	margin: 10px 0;
+	margin: 10px 0px;
 	padding: 10px 18px;
 	width: 100%;
 	border: 1px solid #dadada;
@@ -791,8 +799,30 @@ margin-top: 10px;
 	float: left;
 	padding-top: 5px;
 }
+
+
+
+.rounded1{
+	margin: 10px;
+	padding: 10px 18px;
+	width: 980%;
+	border: 1px solid #dadada;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	max-width: 98%;
+	float: left;
+	min-height: 40px;
+}
+.rounded1 h1{
+	float: left;
+	padding-top: 5px;
+}
+
+
 .table h1{
-	color: #0155AC;
+	/*color: #0155AC;*/
+	color: none;
 	text-transform: uppercase;
 	margin-bottom: 10px;
 	float: left;

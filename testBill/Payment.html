@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <link rel="stylesheet" type="text/css" href="style.min.css?v=1443976200050">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="x-ua-compatible" content="IE=9" />	
+<meta name="HandheldFriendly" content="True">
+ <meta name="MobileOptimized" content="320">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="cleartype" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<script type="text/javascript" src="functions.min.js"></script>
+</head>
+<body>
+<div id="merchant-payment-modes" class="cards-tabs relative">
+					<div class="pt20 relative">
+	<div class="blur-overlay top-overlay"></div>
+	<!-- Cards Controls -->
+	<div class="cards-control relative grey-text" id="leftTab">
+		<!-- <h1 class="large mt10 other-pm-msg">OTHER PAYMENT METHODS</h1> -->
+		<!-- <div class="selection hide">
+			<div class="fr img img-arw-dwn"></div>
+			<a href="#" class="default-name">Select Method</a>
+			<a href="#" class="tab-name hide"></a>
+		</div> -->
+		<ul class="grid">
+			<li class="card active">
+		 
+		<a href="#dc-card">Debit Card</a>
+	</li>
+<li class="card">
+		 
+		<a href="#cc-card">Credit Card</a>
+	</li>
+<li class="card">
+		 
+		<a href="#nb-card">Net Banking</a>
+	</li>
+
+</ul>
+		<div class="blur-overlay"></div>
+	</div>
+	<!-- Cards Controls -->
+	
+	<!-- Payment mode cards -->
+	<div class="cards-content">
+		<div class="card content active" id="dc-card">
+	<div class="card-header xsmall grey-text mb10 relative">
+		<div class="fr">
+			<div class="secure lt-grey-text">
+	        	<div class="img img-lock fl" alt="Secure" title="Secure"></div>
+	        	<span><i>Your payment details are secured via<br>128 Bit encryption by Verisign</i></span>
+	        </div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<form autocomplete="off" name="creditcard-form" method="post" action="submitTransaction?MID=zDjdto21650155633150&amp;ORDER_ID=1255908951&amp;route=webjvm3" id="card" class="dc-form validated">
+		<input type="hidden" name="txnMode" value="DC">
+		<input type="hidden" name="txn_Mode" value="DC">
+		<input type="hidden" name="channelId" value="WEB">
+		<input type="hidden" name="AUTH_MODE" value="3D">
+		<input type="hidden" name="CARD_TYPE" id="cardType" value="">
+		<input type="hidden" name="walletAmount" id="walletAmountDC" value="0">
+		<ul class="grid">
+        	<li class="mb20 card-wrapper">
+            	<label for="cardNumber" class="mb10">ENTER DEBIT CARD NUMBER</label>
+            	<p class="cd">
+            	
+            		<input class="dcCardNumber  text-input large-input cardInput type-tel d" autocomplete="off" name="" id="cn1" type="text" maxlength="23" style="width: 278px" data-type="dc" value="">
+					<input type="hidden" name="cardNumber" value="" class="required">
+				</p>
+                
+                </li>
+			
+            <li class="fl expiry-wrapper" style="overflow:hidden; clear:both;">
+     	    	<label class="mb10 dcExpMonth dcExpYear" for="dcExpMonth">EXPIRY DATE</label>
+               	<div class="mb10">
+               		<div class="fl" id="dcExpMonthWrapper">
+                	<select class="dcExpMonth  combobox required valid" id="dcExpMonth" name="ccExpiryMonth" style="width: 80px;">
+                		<option value="0">MM</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+               		</select>
+               		</div>
+               		
+               	 	<div class="fl ml10" id="dcExpYearWrapper">
+               			<select class="dcExpYear  combobox required" id="dcExpYear" name="ccExpiryYear" style="width: 80px;">
+             				<option value="0">YY</option>
+                           <option value="2015">2015</option>
+							  
+							<option value="2016">2016</option>
+							  
+							<option value="2017">2017</option>
+							  
+							<option value="2018">2018</option>
+							  
+							<option value="2019">2019</option>
+							  
+							<option value="2020">2020</option>
+							  
+							<option value="2021">2021</option>
+							  
+							<option value="2022">2022</option>
+							  
+							<option value="2023">2023</option>
+							  
+							<option value="2024">2024</option>
+							  
+							<option value="2025">2025</option>
+							  
+							<option value="2026">2026</option>
+							  
+							<option value="2027">2027</option>
+							  
+							<option value="2028">2028</option>
+							  
+							<option value="2029">2029</option>
+							  
+							<option value="2030">2030</option>
+							  
+							<option value="2031">2031</option>
+							  
+							<option value="2032">2032</option>
+							  
+							<option value="2033">2033</option>
+							  
+							<option value="2034">2034</option>
+							  
+							<option value="2035">2035</option>
+							  
+							<option value="2036">2036</option>
+							  
+							<option value="2037">2037</option>
+							  
+							<option value="2038">2038</option>
+							  
+							<option value="2039">2039</option>
+							  
+							<option value="2040">2040</option>
+							  
+							<option value="2041">2041</option>
+							  
+							<option value="2042">2042</option>
+							  
+							<option value="2043">2043</option>
+							  
+							<option value="2044">2044</option>
+							  
+							<option value="2045">2045</option>
+							  
+							<option value="2046">2046</option>
+							  
+							<option value="2047">2047</option>
+							  
+							<option value="2048">2048</option>
+							  
+							<option value="2049">2049</option>
+							  
+							<option value="2050">2050</option>
+							  
+							</select>
+               	 </div>
+               	 <div class="clear"></div>
+               </div>
+                </li>
+            
+            <li class="ml10 fl relative" id="dcCvvWrapper">
+                <div class="cvv-block">
+                	<label for="cvvNumber" class="mb10">CVV</label>
+                	<input type="text" name="" class="f-hide" autocomplete="off">
+                	<input class="dcCvvBox  text-input small-input width40 required type-tel" autocomplete="off" type="password" name="cvvNumber" id="dcCvvBox" maxlength="4">
+                	<div class="clear"></div>
+                	</div>
+                
+                <div class="cvv-clue-box hide">
+	                <div class="dc-cvv-clue ui-cluetip mt10">
+	                	The last 3 digit printed on the signature panel on the back of your debit card.
+	                </div>
+	            </div>
+            </li>
+		</ul>
+		<div id="cardInfo" class="storeCardWrapper">
+			<div class="txt12 opt mt10" id="maestroOpt" style="display: none;">If your Maestro Card does not have Expiry Date/CVV, skip these fields</div>
+			<div id="dcStoreCardWrapper" class="fl mt20">
+			        <div id="dcSaveCardLabel" class="fl">
+			        	<input type="checkbox" class="pcb checkbox" name="storeCardFlag" checked="checked" autocomplete="off" style="display: none;">
+						
+			        </div>
+			        <label for="card1" class="save fl mt8">Save this card for faster checkout</label>
+		         </div>
+	        <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        <div class="mt20">
+        	<div class="btn-submit  fl">
+           		<input name="" type="submit" class="gry-btn fr btn-normal" value="Pay now" id="dcSubmit">
+           	</div>
+           	<a href="/oltp-web/cancelTransaction?MID=zDjdto21650155633150&amp;ORDER_ID=1255908951&amp;route=webjvm3" class="cancel">Cancel</a>
+        	<div class="clear"></div>
+        </div>
+        
+	</form>
+	</div><div class="card content" id="cc-card">
+	<div class="card-header xsmall grey-text mb10 relative">
+		<div class="fr">
+			<div class="secure lt-grey-text">
+	        	<div class="img img-lock fl" alt="Secure" title="Secure"></div>
+	        	<span><i>Your payment details are secured via<br>128 Bit encryption by Verisign</i></span>
+	        </div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<form autocomplete="off" name="creditcard-form" method="post" action="submitTransaction?MID=zDjdto21650155633150&amp;ORDER_ID=1255908951&amp;route=webjvm3" id="card" class="cc-form validated">
+		<input type="hidden" name="txnMode" value="CC">
+		<input type="hidden" name="txn_Mode" value="CC">
+		<input type="hidden" name="channelId" value="WEB">
+		<input type="hidden" name="AUTH_MODE" value="3D">
+		<input type="hidden" name="CARD_TYPE" id="cardType" value="">
+		<input type="hidden" name="walletAmount" id="walletAmountCC" value="0">
+		<ul class="grid">
+        	<li class="mb20 card-wrapper">
+            	<label class="mb10" for="cardNumber">ENTER CREDIT CARD NUMBER</label>
+            	<p class="cd">
+            		
+            		<input type="text" name="" class="ccCardNumber  text-input large-input c cardInput type-tel" id="cn" size="16" maxlength="19" style="width: 278px" data-type="cc" value="">
+					<input type="hidden" name="cardNumber" value="" class="required">
+				</p>
+                
+                
+				
+				<div class="error error2 promo-code-error hide">
+						
+					</div>
+				
+			</li>
+			
+            <li class="expiry-wrapper" style="overflow:hidden; clear:both;">
+     	    	<label class="mb10 ccExpMonth ccExpYear" for="ccExpMonth">EXPIRY DATE</label>
+               	<div class="mb10">
+               		<div class="fl" id="ccExpMonthWrapper">
+	                	<select class="ccExpMonth  combobox required" id="ccExpMonth" name="ccExpiryMonth" style="width: 80px;">
+	                		<option value="0">MM</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+	               		</select>
+               		</div>
+               		
+               		<div class="fl ml10" id="ccExpYearWrapper">
+               			<select class="ccExpYear  combobox required" id="ccExpYear" name="ccExpiryYear" style="width: 80px;">
+              				<option value="0">YY</option>
+                            
+                            
+							<option value="2015">2015</option>
+							  
+							<option value="2016">2016</option>
+							  
+							<option value="2017">2017</option>
+							  
+							<option value="2018">2018</option>
+							  
+							<option value="2019">2019</option>
+							  
+							<option value="2020">2020</option>
+							  
+							<option value="2021">2021</option>
+							  
+							<option value="2022">2022</option>
+							  
+							<option value="2023">2023</option>
+							  
+							<option value="2024">2024</option>
+							  
+							<option value="2025">2025</option>
+							  
+							<option value="2026">2026</option>
+							  
+							<option value="2027">2027</option>
+							  
+							<option value="2028">2028</option>
+							  
+							<option value="2029">2029</option>
+							  
+							<option value="2030">2030</option>
+							  
+							<option value="2031">2031</option>
+							  
+							<option value="2032">2032</option>
+							  
+							<option value="2033">2033</option>
+							  
+							<option value="2034">2034</option>
+							  
+							<option value="2035">2035</option>
+							  
+							<option value="2036">2036</option>
+							  
+							<option value="2037">2037</option>
+							  
+							<option value="2038">2038</option>
+							  
+							<option value="2039">2039</option>
+							  
+							<option value="2040">2040</option>
+							  
+							<option value="2041">2041</option>
+							  
+							<option value="2042">2042</option>
+							  
+							<option value="2043">2043</option>
+							  
+							<option value="2044">2044</option>
+							  
+							<option value="2045">2045</option>
+							  
+							<option value="2046">2046</option>
+							  
+							<option value="2047">2047</option>
+							  
+							<option value="2048">2048</option>
+							  
+							<option value="2049">2049</option>
+							  
+							<option value="2050">2050</option>
+							  
+							</select>
+               	 </div>
+               	 <div class="clear"></div>
+               </div>
+                </li>
+            
+            <li class="ml10 fl" id="ccCvvWrapper">
+            	<div class="cvv-block">
+                	<label class="mb10" for="cvvNumber">CVV/SECURITY CODE</label>
+                	<input type="text" name="" class="f-hide" autocomplete="off">
+                	<input class="ccCvvBox  text-input small-input required type-tel" autocomplete="off" type="password" name="cvvNumber" id="ccCvvBox" maxlength="4">
+                	<div class="clear"></div>
+                	</div>
+                <div class="clue-box hide">
+					<div class="cc-cvv-clue default-clue ui-cluetip hide mt10">
+	                	The last 3 digit printed on the signature panel on the back of your credit card.
+	                </div>
+	                <div class="cc-cvv-clue amex-clue ui-cluetip hide mt10">
+	                	Four digits code printed at <br>top of Amex logo on your card.
+	                </div>
+	            </div>
+            </li>
+		</ul>
+		<div class="storeCardWrapper">
+		<div id="ccStoreCardWrapper" class="fl mt20">
+	        <div class="fl" id="ccSaveCardLabel">
+	        	<input type="checkbox" class="pcb checkbox" name="storeCardFlag" checked="checked" autocomplete="off" style="display: none;">
+				 </div>
+	        <label for="card1" class="save fl mt8">Save this card for faster checkout</label>
+	        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="mt20">
+        	<div class="btn-submit  fl">
+	           	<input name="" type="submit" class="gry-btn btn-normal" value="Pay now" id="ccSubmit">
+	         </div>
+	         <a href="/oltp-web/cancelTransaction?MID=zDjdto21650155633150&amp;ORDER_ID=1255908951&amp;route=webjvm3" class="cancel">Cancel</a>
+	         <div class="clear"></div>
+        </div>
+
+	</form>
+	</div><div class="card content" id="nb-card">
+	<div class="card-header xsmall grey-text mb10 relative">
+		<div class="fr">
+			<div class="secure lt-grey-text">
+	        	<div class="img img-lock fl" alt="Secure" title="Secure"></div>
+	        	<span><i>Your payment details are secured via<br>128 Bit encryption by Verisign</i></span>
+	        </div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript">
+		maintainenceNBBank = new Object();
+		lowPerfNBBank = new Object();
+	</script>
+	<form autocomplete="off" name="netbanking-form" method="post" action="#" style="padding: 0px" class="validated">
+		<input type="hidden" name="txnMode" value="NB">
+		<input type="hidden" name="channelId" value="WEB">
+		<input type="hidden" name="txn_Mode" value="NB">
+	 	<input type="hidden" name="AUTH_MODE" value="USRPWD">
+	 	<input type="hidden" name="bankCode" id="bankCode" value="SBI">
+	 	<input type="hidden" name="walletAmount" id="walletAmountNB" value="0">
+	 	<div id="popular-banks-wrapper">
+				<label class="mb10" for="submit-btn">SELECT FROM POPULAR BANKS</label>
+				<ul class="netbanking-panel pt20 pbanks grid banks-panel">
+					<script type="text/javascript">
+								</script>
+							
+							<li>
+								<div id="SBI" title="State Bank of India" class="radio" style="background-position: center 0px;">
+									<input type="radio" class="bankRadio pcb checkbox fl" value="SBI" name="bank" autocomplete="off" style="display: none;"><span class="button-checkbox bootstrap-checkbox bankRadio pcb fl"><button type="button" class="btn-link"></button></span>
+									<label class="fl">
+										<span class="bank-logo" alt="State Bank of India" style="background : url(https://static4.paytm.in/1/images/web/bank/sbi.png) no-repeat;"></span>
+									</label>
+								</div>
+							</li>
+						<script type="text/javascript">
+								</script>
+							
+							<li>
+								<div id="HDFC" title="HDFC Bank" class="radio" style="background-position: center 0px;">
+									<input type="radio" class="bankRadio pcb checkbox fl" value="HDFC" name="bank" autocomplete="off" style="display: none;"><span class="button-checkbox bootstrap-checkbox bankRadio pcb fl"><button type="button" class="btn-link"><span class="tick cb-icon-check" style="display: none;"></span></button></span>
+									<label class="fl">
+										<span class="bank-logo" alt="HDFC Bank" style="background : url(https://static1.paytm.in/1/images/web/bank/hdfc.png) no-repeat;"></span>
+									</label>
+								</div>
+							</li>
+						<script type="text/javascript">
+								</script>
+							
+							<li>
+								<div id="CITI" title="Citibank" class="radio" style="background-position: center 0px;">
+									<input type="radio" class="bankRadio pcb checkbox fl" value="CITI" name="bank" autocomplete="off" style="display: none;"><span class="button-checkbox bootstrap-checkbox bankRadio pcb fl"><button type="button" class="btn-link"><span class="tick cb-icon-check" style="display: none;"></span></button></span>
+									<label class="fl">
+										<span class="bank-logo" alt="Citibank" style="background : url(https://static2.paytm.in/1/images/web/bank/citibank.png) no-repeat;"></span>
+									</label>
+								</div>
+							</li>
+						<script type="text/javascript">
+								</script>
+							
+							<li>
+								<div id="ICICI" title="ICICI Bank" class="radio" style="background-position: center 0px;">
+									<input type="radio" class="bankRadio pcb checkbox fl" value="ICICI" name="bank" autocomplete="off" style="display: none;"><span class="button-checkbox bootstrap-checkbox bankRadio pcb fl"><button type="button" class="btn-link"><span class="tick cb-icon-check" style="display: none;"></span></button></span>
+									<label class="fl">
+										<span class="bank-logo" alt="ICICI Bank" style="background : url(https://static3.paytm.in/1/images/web/bank/icici.png) no-repeat;"></span>
+									</label>
+								</div>
+							</li>
+						<script type="text/javascript">
+								</script>
+							
+							<li>
+								<div id="AXIS" title="Axis Bank" class="radio" style="background-position: center 0px;">
+									<input type="radio" class="bankRadio pcb checkbox fl" value="AXIS" name="bank" autocomplete="off" style="display: none;"><span class="button-checkbox bootstrap-checkbox bankRadio pcb fl"><button type="button" class="btn-link"><span class="tick cb-icon-check" style="display: none;"></span></span>
+									<label class="fl">
+										<span class="bank-logo" alt="Axis Bank" style="background : url(https://static3.paytm.in/1/images/web/bank/axis.png) no-repeat;"></span>
+									</label>
+								</div>
+							</li>
+						<script type="text/javascript">
+								</script>
+							
+							<li>
+								<div id="PNB" title="Punjab National Bank" class="radio" style="background-position: center 0px;">
+									<input type="radio" class="bankRadio pcb checkbox fl" value="PNB" name="bank" autocomplete="off" style="display: none;"><span class="button-checkbox bootstrap-checkbox bankRadio pcb fl"><button type="button" class="btn-link"><span class="tick cb-icon-check" style="display: none;"></span></span>
+									<label class="fl">
+										<span class="bank-logo" alt="Punjab National Bank" style="background : url(https://static4.paytm.in/1/images/web/bank/pnb.png) no-repeat;"></span>
+									</label>
+								</div>
+							</li>
+						</ul>
+				<div class="clear"></div>
+				<div class="clear"></div>
+			</div>
+		
+			<div id="other-banks-wrapper">
+				<label class="mt20 mb10" for="submit-btn">OR SELECT OTHER BANK</label>
+				<div id="nbWrapper">
+					<select class="nbSelect" id="nbSelect" data-size="5">
+						<option value="-1">Select</option>
+						<option value="SBI">State Bank of India</option>
+								<script type="text/javascript">
+									</script>
+						<option value="HDFC">HDFC Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="CITI">Citibank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="ICICI">ICICI Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="AXIS">Axis Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="PNB">Punjab National Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="KOTAK">Kotak Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="ANDHRA">Andhra Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="BBK">Bank of Bahrain and Kuwait</option>
+								<script type="text/javascript">
+									</script>
+						<option value="BOB">Bank of Baroda</option>
+								<script type="text/javascript">
+									</script>
+						<option value="BOI">Bank of India</option>
+								<script type="text/javascript">
+									</script>
+						<option value="BOM">Bank of Maharashtra</option>
+								<script type="text/javascript">
+									</script>
+						<option value="CANARA">Canara Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="CSB">Catholic Syrian Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="CBI">Central Bank of India</option>
+								<script type="text/javascript">
+									</script>
+						<option value="CITIUB">City Union Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="CORP">Corporation Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="COSMOS">Cosmos Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="DEUTS">Deutsche Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="DBSP">Development BankSingapore</option>
+								<script type="text/javascript">
+									</script>
+						<option value="DCB">DCB Bank Personal</option>
+								<script type="text/javascript">
+									</script>
+						<option value="FDEB">Federal Bank</option>
+								<script type="text/javascript">
+									
+										maintainenceNBBank["FDEB"] = true;
+									</script>
+						<option value="IDBI">IDBI Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="INDB">Indian Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="IOB">Indian Overseas Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="INDS">IndusInd Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="ING">ING Vysya Bank (now Kotak)</option>
+								<script type="text/javascript">
+									</script>
+						<option value="JKB">Jammu and Kashmir Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="KTKB">Karnataka Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="KVB">Karur Vysya Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="LVB">Lakshmi Vilas Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="OBPRF">Oriental Bank of Commerce</option>
+								<script type="text/javascript">
+									</script>
+						<option value="PAYCC">Pay Cash Card</option>
+								<script type="text/javascript">
+									</script>
+						<option value="SVB">Shamrao Vithal Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="STB">Saraswat Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="SIB">South Indian Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="SCB">Standard Chartered Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="SBJ">State Bank of Bikaner and Jaipur</option>
+								<script type="text/javascript">
+									</script>
+						<option value="SBH">State Bank Of Hyderabad</option>
+								<script type="text/javascript">
+									</script>
+						<option value="SBM">State Bank of Mysore</option>
+								<script type="text/javascript">
+									</script>
+						<option value="SBOP">State Bank of Patiala</option>
+								<script type="text/javascript">
+									</script>
+						<option value="SBT">State Bank of Travancore</option>
+								<script type="text/javascript">
+									</script>
+						<option value="SYNBK">Syndicate Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="UNI">Union Bank of India</option>
+								<script type="text/javascript">
+									</script>
+						<option value="UBI">United Bank of India</option>
+								<script type="text/javascript">
+									</script>
+						<option value="VJYA">Vijaya Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="YES">Yes Bank</option>
+								<script type="text/javascript">
+									</script>
+						<option value="UCO">UCO Bank</option>
+								<script type="text/javascript">
+									</script>
+						</select>
+				</div>	
+			</div>
+			<div id="warningDiv" class="hide clear" style="display: none;">
+				<div id="errorMsg" class="mt10"></div>
+			</div>
+			
+			<div class="mt20">
+				<div class="btn-submit  fl">
+	           		<input name="submit-btn" type="submit" class="blue-btn required btn-normal valid" value="Pay now" id="nbSubmit">
+	           	</div>
+	           	<a href="/oltp-web/cancelTransaction?MID=zDjdto21650155633150&amp;ORDER_ID=1255908951&amp;route=webjvm3" class="cancel">Cancel</a>
+	           	<div class="clear"></div>
+	        </div>
+	       
+		</form>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var bankName = "";
+		preselectedNBBank = bankName || null;
+	});
+</script>
+<div class="card content" id="atm-card">
+	<div class="card-header xsmall grey-text mb10 relative">
+		<div class="fr">
+			<div class="secure lt-grey-text">
+	        	<div class="img img-lock fl" alt="Secure" title="Secure"></div>
+	        	<span><i>Your payment details are secured via<br>128 Bit encryption by Verisign</i></span>
+	        </div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript">
+		maintainenceATMBank = new Object();
+		lowPerfATMBank = new Object();
+	</script>
+
+    <div class="clear"></div>
+</div></div>
+	
+	<div class="clear"></div>
+</div>
+</div>
+<div id="footer-placeholder" class="hide">
+			</div>
+<div id="footer" class="mt50">
+	
+		<div class="img img-partner-logo fr"></div>
+	
+</div>
+</body>
+</html>
