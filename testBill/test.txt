@@ -1,0 +1,24 @@
+<NotepadPlus>
+    <Project name="bill template">
+        <File name="AngularJS3.js" />
+        <File name="AngularJS4.js" />
+        <File name="Bootstrap0.css" />
+        <File name="Bootstrap5.js" />
+        <File name="cc-paytm.png" />
+        <File name="dc.png" />
+        <File name="feedback.html" />
+        <File name="footer_logos.png" />
+        <File name="functions.min.js" />
+        <File name="Highcharts6.js" />
+        <File name="highcharts7.js" />
+        <File name="img-lock.png" />
+        <File name="index.html" />
+        <File name="jquery1.js" />
+        <File name="Main.htm" />
+        <File name="Payment.html" />
+        <File name="skeleton.css" />
+        <File name="sprite_compressed.png" />
+        <File name="style.min.css" />
+        <File name="UAParser2.js" />
+    </Project>
+</NotepadPlus>
