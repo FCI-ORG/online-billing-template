@@ -10,7 +10,7 @@
     <title>Interactive bill</title>
     <link href="Bootstrap0.css" rel="stylesheet" type="text/css" />
     <link href="skeleton.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/flick/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/flick/jquery-ui.css"> <!--used for feedback page (range bar)-->
 
    <script type="text/javascript" src="jquery1.js"></script>
    <script type="text/javascript" src="UAParser2.js"></script>
@@ -20,7 +20,7 @@
    <script type="text/javascript" src="Highcharts6.js"></script>
    <script type="text/javascript" src="highcharts7.js"></script>
    
-   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> <!--used for feedback page (range bar)-->
 
   
 
@@ -268,41 +268,105 @@
 								"DETAILSECTION":
 								[
 									{
-										
+										"Desc":"713348908",
 										"DETAILS":
 										[
 											{
-												"Pos01":"Type of call",
-												"Pos02":"Quantity",
-												"Pos03":"Duration",
+												"Pos01":"Months",
+												"Pos02":"Reading",
+												
 												"Pos04":"Cost",
 												"Pos05":"VAT",
 												"DETAILLINE":
 												[
 													{
-														"CDetLabel":"Home airtime",
-														"CDetQuantity":50,
-														"CDetDuration":"0:19:15",
+														"CDetLabel":"Jan",
+														"CDetQuantity":452,
+														
 														"CDetCharge":"1,22000"
 													},
 													{
-														"CDetLabel":"Long distance",
-														"CDetQuantity":9,
-														"CDetDuration":"0:27:45",
+														"CDetLabel":"Feb",
+														"CDetQuantity":523,
+														
 														"CDetCharge":"2,11000"
 													},
 													{
-														"CDetLabel":"Medium distance",
-														"CDetQuantity":20,
-														"CDetDuration":"0:20:45",
-														"CDetCharge":"1,11000"
+														"CDetLabel":"Mar",
+														"CDetQuantity":323,
+														
+														"CDetCharge":"2,11000"
 													},
-													
 													{
-														"CDetLabel":"Short distance",
-														"CDetQuantity":40,
-														"CDetDuration":"0:40:45",
-														"CDetCharge":"5,11000"
+														"CDetLabel":"Apr",
+														"CDetQuantity":423,
+														
+														"CDetCharge":"2,11000"
+													},
+													{
+														"CDetLabel":"May",
+														"CDetQuantity":223,
+														
+														"CDetCharge":"2,11000"
+													},
+													{
+														"CDetLabel":"Jun",
+														"CDetQuantity":723,
+														
+														"CDetCharge":"2,11000"
+													}
+													
+												]
+											}
+										]
+									},
+									{
+										"Desc":"713354473",
+										"DETAILS":
+										[
+											{
+												"Pos01":"Months",
+												"Pos02":"Reading",
+												
+												"Pos04":"Charge",
+												"Pos05":"VAT",
+												"DETAILLINE":
+												[
+													{
+														"CDetLabel":"Jan",
+														"CDetQuantity":492,
+														
+														"CDetCharge":"0,00000"
+													},
+													{
+														"CDetLabel":"Feb",
+														"CDetQuantity":682,
+														
+														"CDetCharge":"1,32000"
+													},
+													{
+														"CDetLabel":"Mar",
+														"CDetQuantity":543,
+														
+														"CDetCharge":"2,11000"
+													},
+													{
+														"CDetLabel":"Apr",
+														"CDetQuantity":563,
+														
+														"CDetCharge":"2,11000"
+													},
+													{
+														"CDetLabel":"May",
+														"CDetQuantity":263,
+														
+														"CDetCharge":"2,11000"
+													},
+													{
+														"CDetLabel":"Jun",
+														"CDetQuantity":233,
+														
+														"CDetCharge":"2,11000"
 													}
 												]
 											}
@@ -448,8 +512,8 @@
 			  <tabs>
 					<pane label="Overview">
 						<div class="content home">
-
-
+							<div class="clr"></div>
+								
 							<div class="equal">
 									<div class="table half_table">
 										<h1>Customer Details</h1>
@@ -506,7 +570,10 @@
 												</p>
 												<p id="FModPag">
 													<span>Due by</span>
-													<span>{{FILE.DOCUMENT[0].TEMPLATE[0].INVOICE[0].ExpireDate}}</span>
+													<span>{{FILE.DOCUMENT[0].TEMPLATE[0].INVOICE[0].ExpireDate}}
+													<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAx1JREFUeNqsVktPE1EU/mamhZYKihoegQRoK61QBFIixIVx4cK40ODOnVsSF/IziAsSQzQYXRsWGjcm7jAhIRJFRcJbTDDykAVNUKHM447n3Jlp2kINj55we889nft9fN+5d0DRHq4BigL6AJbHYT25002LOI15re/VBCJX8N8ouMemHxuKSzBIlXZ+3vo+XzF7vzrZMvRrUgvHt3GIKLBnigj6fbAsXnQ86K2/ZujA2LstLC0toeNiNNndcw5C2PQIDXc2eRaASZsMUm3SWC+tknsu0Z5gWzVK/MD42CrbAp/NqIBmGMDOjo2gmsbtNxu43FKL1JYB0xTOIFRJQMotBiZbTVWV48/uX7mnIVaH9J6N0/Qd4WqSAHqaZ9WTG+tsR7StDabBwNZhHEJ5LIFESzssTUVmh56WmKqt74GG5tWf96i4VQ88TqZxs0bHYGILxwnGZGxSoOcouD6yhvLyEB6lfiNUFsTTbRvnzx6DQdfV7B5kCBoaamCR56FgUFoUDARkD46swHAI5OGl0W8XORgzLhU4hCrPVEcxQuFT5Lric2uqIHAhBF6PjmaIeLbd+kF5/prjXm8vVFXN2O785nQPmMByH4pEIgiHwzLnmddenl1vamraV2cMxmJMO1+BJcSJ7WEMRb7bXIu8HjCzSa+N5MAAnRoTOl3tZjrCm0ND0obKykqkUqmcnG3JzxlDIYv29UASuAqa796Q8+dnL3G1s1PmX5aX0eFa9XFhAV2xmMzfz8ygp7VV5uPT0xJDdazOUaAVskhknazD5Izh9aCggsUXb6VFHDMrK9KWQEkJpkgF53z5JkkF21JGF3KCVHiniDF8ByoQQvqXGh7GhdpaWVxYXUW8ri5DlGhsdF70bFc0KnMm6orHZf5hbk5iyKN7kALPoqPakm+RlaPAOVKl2T34tr6e2bBIKoRbn3Xt4vhKKjxbPrl25fRAUUolgdvWoHAvyalQ6GT3gC8aqyJMSbBBH1W08Pv9KDshuBeMxQSbTJC27TO7ivIzGQiMoIixB/wg7ApuQACOnIDzv0tRgv9y7jLPPwEGAMi/WPesl/R6AAAAAElFTkSuQmCC"/></a>
+                                
+													</span>
 												</p>
 												<p id="Class" Class="{{FILE.DOCUMENT[0].TEMPLATE[0].INVOICE[0].Class}}">
 													<span>Bill Amount</span>
@@ -623,7 +690,7 @@
 
 									</div>
 
-
+								
 							</div>
 
              <!-- Current Changes  table create &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -641,202 +708,7 @@
 							</div>	
 							<div class="clr"></div>-->
 							
-							<div class="accordion_block">
-								<div class="table riepilogiiva">
-									<div class="striped home_riepilogiiva_table">
-										<div class="container1">
-											
-											<div class="row">
-												<div class="rounded1 dark_grey" id="">
-													<div class="seven columns"><strong>Description</strong></div>
-													<div class="one columns" style="margin-right:45px;"><strong>Qty</strong></div>
-													<div class="two columns"><strong>Rate</strong></div>
-													<div class="two columns"><strong>Amount</strong></div>
-												</div>	
-                                            
-											</div>
-											<div class="xyz collapse">
-											<div class="seven columns"><h3>Current Charges</h3></div>
-											
-											<div class="row1">
-											
-												<div class="seven columns"><strong>Energy Charges</strong></div>
-												<div class="two columns"></div>
-												<div class="two columns"></div>
-												<div class="two columns"></div>
-												
-											
-											</div>
-											
-											<div class="row1">
-											
-												<div class="seven columns">Base Charges................................................................................................</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&#36;4.95</div>
-												
-											
-											</div>
-											
-											<div class="row1">
-											
-												<div class="seven columns">Energy Charge...............................................................................................</div>
-												<div class="two columns">852.00</div>
-												<div class="two columns">0.09400</div>
-												<div class="two columns">&#36;80.09</div>
-												
-											
-											</div>
-											
-											<div class="row1">
-											
-												<div class="seven columns">TCRF................................................................................................................</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&#36;0.97</div>
-												
-											
-											</div>
-											
-											<div class="row1">
-											
-												<div class="seven columns"><strong>Taxes</strong></div>
-												<div class="two columns"></div>
-												<div class="two columns"></div>
-												<div class="two columns"></div>
-												
-											
-											</div>
-											
-											
-											<div class="row1">
-											
-												<div class="seven columns">City Tax............................................................................................................</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&#36;0.88</div>
-												
-											
-											</div>
-											
-											<div class="row1">
-											
-												<div class="seven columns">PUC Assessment Charge..........................................................................</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&#36;0.14</div>
-												
-											
-											</div>
-											
-											<div class="row1">
-											
-												<div class="seven columns">Gross Receipt...............................................................................................</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&#36;1.72</div>
-												
-											
-											</div>
-											
-											<div class="row1">
-											
-												<div class="seven columns"><strong>Total Current Charges</strong></div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns"><strong>&#36;88.75</strong></div>
-												
-											
-											</div>
-											
-												
-											<div class="seven columns"><h3>Previous Charges</h3></div>
-											
-											<div class="row1">
-											
-												<div class="seven columns">Previous Balance.........................................................................................</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&#36;75.49</div>
-												
-											
-											</div>
-											
-											<div class="row1">
-											
-												<div class="seven columns">Payment 06/22/2015....................................................................................</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">-&#36;75.49</div>
-												
-											
-											</div>
-											
-											<div class="row1">
-											
-												<div class="seven columns"><strong>Balance Forward.........................................................................................</strong></div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&#36;0.00</div>
-												
-											
-											</div>
-											
-											
-											
-											
-											
-											
-											<div class="row1">
-											
-												<div class="seven columns"><h3>Adjustments</h3></div>
-												
-											
-											</div>
-											
-											<div class="row1">
-											
-												<div class="seven columns">Promotion(Credit) 06/30/2015...................................................................</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-												<div class="two columns">-&#36;0.17</div>
-												
-											
-											</div>
-											
-												<div class="row1">
-												
-													<div class="seven columns"><strong>Total Adjustments</strong></div>
-													<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-													<div class="two columns">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-													<div class="two columns">-&#36;0.17</div>
-													
-												
-												</div>
-												
-											</div>	
-											<div class="row1">
-											
-												<div class="seven columns"><h3>Total Amount Due</h3></div>
-												<div class="two columns">_ _ _ </div>
-												<div class="two columns">_ _ _ </div>
-												<div class="two columns"><h3>-&#36;88.58</h3></div>
-											
-											</div>
-											
-											
-										
-										</div>
-									</div>
-									<a class="right show_hide_button collapsed" data-toggle="collapse" data-target=".xyz">
-									  <span class="collapsed_text">Expand</span>
-									  <span class="opened_text">Close</span>
-									</a>	
-									<div class="clr"></div>
-								</div>
-
-
-							</div>
+							
 							
 
 
@@ -887,11 +759,82 @@
 
 
 
-                         <div class="clr"></div>
+                       
 							<!-- <div class="thevideo" style="width:100%" onclick="thevid=document.getElementById('thevideo1'); thevid.style.display='block'; this.style.display='none'">
 								<div class="thevideo__cover"></div>
 							</div> -->
+							
+							<style type="text/css">
+							.socialFrame {
+								
+								border: 0 solid;
+								float: left;
+								margin-top: 30px;
+								}
+								.headerpdf{
+								    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+									font-style: italic;
+									font-size: 14px;
+									color: #005e7d;
+									text-align: center;
+									border: 0 solid;
+									display: inline-block;
+									margin-left: 10px;
+									}
+									
 
+									
+								@media (orientation: landscape)
+								.pdfIcon1 {
+									float: right;
+									cursor: pointer;
+									margin-right: 20px;
+								}
+								
+								
+								@media (orientation: landscape)
+								.headerpdf {
+									font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+									font-style: italic;
+									font-size: 14px;
+									color: #005e7d;
+									text-align: center;
+									border: 0 solid;
+									display: inline-block;
+									margin-left: 10px;
+								}
+								
+								
+							</style>
+							
+							
+
+							<div class="container">
+							
+								<div class="row">
+								    <div class="eight columns">&nbsp;</div>
+									<div class="three columns" style="float:right;">
+									<div class="socialFrame">
+								
+								<div class="pdfIcon1"><a href="#">
+									<div class="headerpdf">Download copy</div>
+									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABTJJREFUeNq0V2tMXEUU/ubOvfsGGltUahCwKhhDICgKqIml1jYkxCDVEI0/jP5utWlif2p8xUQrvhq1QWtiQ6VQWiA+fvkgsSRoxVgTbNKEkCZQlmeVbQu7O54z9+6yu91dWEInmb1353HON+fxnblCKYVYE0KYfX19x+nZig1o4XC4u6WlpY1eI+nmtW7+iXVqef39/Wqj2sTEhOru7j5BcmUmAGbKmDv2cnbkTxiGsfoxhWBJ8b/RaBQ11VXo6elBa2srGhoa9tD7D+3t7U2Dg4NLqdtTAcQ1WpYLUhpZFSvThLFwGSrgI802iEgkqp9SSszNzaOoqAj19fU7TNP8hwDcTVPLaRWmNoOUswUydeGyUPBRB/K+6oIwrZW5BNAerwfB4LQGUVtbW9rb23uez7YmACYJk9k6nVBYJsKNDyetNR23sX+9Hg8CeYG4Jerq6kopyC8kgjAzW0BmjQGl5yV8R77G5c/fg4jFAccEtbKyMtCJObMc10R0TND/YvpLPsNCVgDSMWmWIEC0tBjm0FlIk6yxbK81SOH0zAyqq6t1z9Dca7DAKgDY12W3Q9DDIFeIpZW1i6EQ/ltcTFoeJQvdUVKC1bIgQX52F4ACzzzzG+S5UViTQaibNpGdoxmXc3qmPWhGC5BZtRXSdZ7zumGd+h7LX7bDfeA1GJSKq+3JCYBJFpCZussNs/MUVNU9wK5GKHKFdfAtyPx8SK8X0sPdA6m5xNR7WF5aPRldQKhjEXwd8/m9EK8fgvrlNCSb9uO3Ie7bCaPpGajtDU4hIPp/6AGgrka/J9acNQHQZJMOABEQjp2EuqsM4uQARHCGEupf4LmngG0lEEe/gfr5V+DJZuDDDohHHtQsmTMANlsSAH4n5WpyCtH3P4N84yBE3f1AfiBWWajTc/cOUApA/fEXRx7xg+CUWocFEl3A2eBxI/Lqu1B/j0K+8CyZmxRdW+Kam7xxiUzvdgENtbHw1ymbCYCRjYji3e1G+Pl9MKrvhZqehbX3RcjlMCQBTEvTPE4KdU9Yk5sLTDMxIMik5xAZuwj/d51QkbBtlQ1oWak44eYA/8AxyOKt9Bq1CedGAYj6vPaEmTJFyu1gNJgk1q0wJj8jgPJmug7W1mJ0eJh0ZVHEQZUuTTMtp2CsILnlJDcrAOWjSun3w1NYaNcCKqPq6lUtQGeFZUHwXYAYLzI762QoreOC5HLpqE9aT0woKCt0JSC5Wn5oYZUYoNO5KPIZgFoMoejSxfhU6HgX5ve+jK3jF5K2hLq6sXDgFb03cX1kfBxT2x/X1zekScWMNmYAFp3IcmJh6ubbMLe7Gb62p+GtrNRj83vaECy5EzOVNbDoArL5iyMwnao3dWsxgtsqMPdYE1x0apaXUxbwBjahWrbvkJ5AHsSlSXvulkL7WUDFZ8sWTbVLnxyG/2gHXNIW6aGCJKggscu4q1zT0M2I2YcOAN87b8J8gvidbjvy9xF7M1c6x7TCdNn7WCm1/LHzdk060YPIoQ+4uuUAgARajqAY1coff4I6MwQ1NAzXpgL76l5RTr61dD0Q+18CBr6FK2DXhmgVUTGZ3qDTGxx4Kd8Pa6qGDiHYkT5CxYVyWAT8wJUr9tj+fYgnYmcXcPhTuqjYeW7k5wFe7zqYkJEm5j+jb9xFH22BlXEee3SnzYjC2cNAKc30KXk9r0nlEf6fwh3XAaD6FiQSKoRS2PBGyll+0lDK1zE7t5T6ZgBi4xHoZKAbDMb4u4B1pwKwnI8GN25cu8a8xd+IrPt/AQYAntHxL2P1ZVwAAAAASUVORK5CYII="/>
+                                <hr size="2"></a>
+
+								</div>
+								
+							</div>
+									
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="clr"></div>
+							
+							
+								
+								
 							<iframe style="display: none" id="thevideo1" width="100%" height="390" frameborder="0" title="YouTube video player" type="text/html" src=""></iframe>
 							<div class="clr"></div>
 						</div>
@@ -937,6 +880,8 @@
 											color:#FBF9F9;
 											background:#0C89FD;
 											}
+											
+											
 										</style>
 										
 										
@@ -976,7 +921,202 @@
 
 
 							</div>
-							
+							<div class="accordion_block">
+								<div class="table riepilogiiva">
+									<div class="striped home_riepilogiiva_table">
+										<div class="container1" style="font-size:14px;">
+											
+											<div class="row">
+												<div class="rounded1 dark_grey" id="">
+													<div class="seven columns"><strong>Description</strong></div>
+													<div class="one columns" style="margin-right:45px;"><strong>Qty</strong></div>
+													<div class="two columns"><strong>Rate</strong></div>
+													<div class="two columns"><strong>Amount</strong></div>
+												</div>	
+                                            
+											</div>
+											<div class="xyz collapse">
+											<div class="seven columns"><h3>Current Charges</h3></div>
+											
+											<div class="row1">
+											
+												<div class="seven columns"><strong>Energy Charges</strong></div>
+												<div class="two columns"></div>
+												<div class="two columns"></div>
+												<div class="two columns"></div>
+												
+											
+											</div>
+											
+											<div class="row1">
+											
+												<div class="seven columns">Base Charges........................................................................</div>
+												<div class="two columns">---</div>
+												<div class="two columns">---</div>
+												<div class="two columns">&#36;4.95</div>
+												
+											
+											</div>
+											
+											<div class="row1">
+											
+												<div class="seven columns">Energy Charge.......................................................................</div>
+												<div class="two columns">852.00</div>
+												<div class="two columns">0.09400</div>
+												<div class="two columns">&#36;80.09</div>
+												
+											
+											</div>
+											
+											<div class="row1">
+											
+												<div class="seven columns">TCRF......................................................................................</div>
+												<div class="two columns">---</div>
+												<div class="two columns">---</div>
+												<div class="two columns">&#36;0.97</div>
+												
+											
+											</div>
+											
+											<div class="row1">
+											
+												<div class="seven columns"><strong>Taxes</strong></div>
+												<div class="two columns"></div>
+												<div class="two columns"></div>
+												<div class="two columns"></div>
+												
+											
+											</div>
+											
+											
+											<div class="row1">
+											
+												<div class="seven columns">City Tax..................................................................................</div>
+												<div class="two columns">---</div>
+												<div class="two columns">---</div>
+												<div class="two columns">&#36;0.88</div>
+												
+											
+											</div>
+											
+											<div class="row1">
+											
+												<div class="seven columns">PUC Assessment Charge.......................................................</div>
+												<div class="two columns">---</div>
+												<div class="two columns">---</div>
+												<div class="two columns">&#36;0.14</div>
+												
+											
+											</div>
+											
+											<div class="row1">
+											
+												<div class="seven columns">Gross Receipt........................................................................</div>
+												<div class="two columns">---</div>
+												<div class="two columns">---</div>
+												<div class="two columns">&#36;1.72</div>
+												
+											
+											</div>
+											
+											<div class="row1">
+											
+												<div class="seven columns"><strong>Total Current Charges</strong></div>
+												<div class="two columns">---</div>
+												<div class="two columns">---</div>
+												<div class="two columns"><strong>&#36;88.75</strong></div>
+												
+											
+											</div>
+											
+												
+											<div class="seven columns"><h3>Previous Charges</h3></div>
+											
+											<div class="row1">
+											
+												<div class="seven columns">Previous Balance...................................................................</div>
+												<div class="two columns">---</div>
+												<div class="two columns">---</div>
+												<div class="two columns">&#36;75.49</div>
+												
+											
+											</div>
+											
+											<div class="row1">
+											
+												<div class="seven columns">Payment 06/22/2015..............................................................</div>
+												<div class="two columns">---</div>
+												<div class="two columns">---</div>
+												<div class="two columns">-&#36;75.49</div>
+												
+											
+											</div>
+											
+											<div class="row1">
+											
+												<div class="seven columns"><strong>Balance Forward..................................................................</strong></div>
+												<div class="two columns">---</div>
+												<div class="two columns">---</div>
+												<div class="two columns">&#36;0.00</div>
+												
+											
+											</div>
+											
+											
+											
+											
+											
+											
+											<div class="row1">
+											
+												<div class="seven columns"><h3>Adjustments</h3></div>
+												
+											
+											</div>
+											
+											<div class="row1">
+											
+												<div class="seven columns">Promotion(Credit) 06/30/2015.................................................</div>
+												<div class="two columns">---</div>
+												<div class="two columns">---</div>
+												<div class="two columns">-&#36;0.17</div>
+												
+											
+											</div>
+											
+												<div class="row1">
+												
+													<div class="seven columns"><strong>Total Adjustments</strong></div>
+													<div class="two columns">---</div>
+													<div class="two columns">---</div>
+													<div class="two columns">-&#36;0.17</div>
+													
+												
+												</div>
+												
+											</div>	
+											<div class="row1">
+											
+												<div class="seven columns"><h3>Total Amount Due</h3></div>
+												<div class="two columns">_ _ _ </div>
+												<div class="two columns">_ _ _ </div>
+												<div class="two columns"><h3>-&#36;88.58</h3></div>
+											
+											</div>
+											
+											
+										
+										</div>
+									</div>
+									<a class="right show_hide_button collapsed" data-toggle="collapse" data-target=".xyz">
+									  <span class="collapsed_text">Expand</span>
+									  <span class="opened_text">Close</span>
+									</a>	
+									<div class="clr"></div>
+								</div>
+
+								<div class="clr"></div>
+							</div>
 							<style type="text/css">
 										.tableFci1{
 											text-align:center;
@@ -1037,7 +1177,7 @@
 										<h1>Important Notes:</h1>
 										<div class="clr"></div>
                                          <ul class="generic-list">
-											<li class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.</li>
+											<li class="yes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.</li>
 											<li class="item">Laboriosam quaerat sapiente minima nam minus similique illum architecto et!</li>
 											<li class="item">Incidunt vitae quae facere ducimus nostrum aliquid dolorum veritatis dicta!</li>
 											<li class="item">Tenetur laborum quod cum excepturi recusandae porro sint quas soluta!</li>
@@ -1208,68 +1348,20 @@
 							</div>
 							
 							<div class="clr"></div>
-
-							<div class="table t_rep" ng-repeat="DETUSOr in FILE.DOCUMENT[0].TEMPLATE[0].TRAFFICDETAILSPANEL[0].DETAILSECTION">
+							<select id="ddlMeters" class="ng-valid ng-dirty" ng-init="ddlMeter='0'" ng-model="ddlMeter" ng-options="Meters.Desc as Meters.Desc for Meters in FILE.DOCUMENT[0].TEMPLATE[0].TRAFFICDETAILSPANEL[0].DETAILSECTION" >								
+								<option value="">-Select Meter No.-</option>
+							</select>
+							<div class="table t_rep" ng-repeat="DETUSOr in FILE.DOCUMENT[0].TEMPLATE[0].TRAFFICDETAILSPANEL[0].DETAILSECTION | filter:{Desc:ddlMeter}">
 
 								<em class="DETAILS_det hid">07</em>
 
-								<h1>{{DETUSOr.Desc}}</h1>
+								<h1>Meter No. - {{DETUSOr.Desc}}</h1>
 								<div class="clr"></div>
-								<div class="data_table" >
-									<div class="orange">
-										<p>
-											<span></span>
-											<span>&nbsp;</span>
-											<span>&nbsp;</span>
-											<span class="DETAILS pull-right">
-												<span class="DETAILS_CostoIvaInclusa">{{DETUSOr.TOTUSO[0].CostoIvaInclusa}} $ </span>
-												<span class="DETAILS_Costo">{{DETUSOr.TOTUSO[0].Costo}} </span>
-											</span>
-											<div class="clr"></div>
-										</p>
-									</div>
-								</div>
+								
 
 								<div class="accordion_block">
 									<div class="collapse in data_table" id="{{$index}}_collapse_block" >
-										<table class="table-striped table-condensed"  width="100%" >
-											<tr>
-												<th class="s3">{{DETUSOr.DETAILS[0].Pos01}}</th>
-												<th class="s5">{{DETUSOr.DETAILS[0].Pos02}}</th>
-												<th class="s4"><span class="lusopos03">{{DETUSOr.DETAILS[0].Pos03}}</span> <span class="if_kb hidden"> <span class="sx hidden">{{DETUSOr.DETAILS[0].Pos04}}</span> (Kbyte)</span></th>
-												<th class="s6 in_ex">Charge (Tax <span class="class_{{FILE.DOCUMENT[0].TEMPLATE[0].INVOICE[0].Class}}"></span>)</th>
-											</tr>
-											<tr ng-repeat="VUSOr in DETUSOr.DETAILS[0].DETAILLINE">
-												<td class="s7" style="text-align: left;">{{VUSOr.CDetLabel}}<em class="mms hid">{{VUSOr.flgMMS}}</em></td>
-												<td class="s8"  style="text-align: left;">
-													<span class="pos02 hidden">{{VUSOr.CDetQuantity}}</span>
-													<span class="pos03 hidden">{{VUSOr.CDetDuration}}</span>
-
-												</td>
-												<td class="s9"  style="text-align: right;">
-													<span class="pos02 hidden">{{VUSOr.CDetQuantity}}</span>
-													<span class="pos03 hidden">{{VUSOr.CDetDuration}}</span>
-													<span class="pos04 hidden">{{VUSOr.Pos04}}</span>
-												</td>
-												<td class="s10 "  style="text-align: right;">
-													<span class="pos12 hidden">{{VUSOr.Pos12}}</span>
-													<span class="pos13 hidden">{{VUSOr.Pos13}}</span>
-													<span class="pos14 hidden">{{VUSOr.CDetCharge}}</span>
-													<span class="pos15 hidden">{{VUSOr.CDetCharge}}</span>
-													<span class="pos16 hidden">{{VUSOr.Pos16}}</span>
-												</td>
-											</tr>
-											<tr class="CanaleBollClass4 hidden">
-												<td colspan="4">
-													<p style="font-size: smaller;"><br/>Il dettaglio dei consumi effettuati è disponibile nella MyYellowtel page, accessibile dal
-													sito www.doxee.com, alla voce "Vedi il Conto" del menù "Servizi per il tuo Business".
-													Sempre nella Sua pagina, sezione » Servizi Personali » GESTIONE ABBONAMENTO », potrà inoltre disporre di informazioni
-													aggiornate in continuo sul livello dei Suoi consumi effettivi.
-													<br/><br/>
-													</p>
-												</td>
-											</tr>
-										</table>
+										
 
 										<div class="remove_chart_from_det_block">
 											<table width="100%" class="hid colls"  id="{{$index}}_datatable_colls">
@@ -1315,12 +1407,12 @@
 											<span class="hrs"></span>
 
 											<ul class="nav nav-tabs " role="tablist" >
-												<li class="active">
+												<li class="active cost">
 													<a href="#phone{{$index}}_colls" role="tab" data-toggle="tab">
 														Units
 													</a>
 												</li>
-												<li class="">
+												<li class="cost">
 													<a href="#phone{{$index}}_durata" role="tab" data-toggle="tab">
 														Duration
 													</a>
@@ -1342,7 +1434,7 @@
 															<div class="chart" style="height: 300px" id="phone{{$index}}_colls_graph"></div>
 														</div>
 													</div>
-													<div class="legend" id="phone{{$index}}_colls_customLegend"><h2>Number of calls {{detagliotrafficoTables.legendTitle}}</h2></div>
+													<div class="legend" id="phone{{$index}}_colls_customLegend"><h2>Month {{detagliotrafficoTables.legendTitle}}</h2></div>
 													<div class="clr"></div>
 												</div>
 												<div class="tab-pane fade durata grey" id="phone{{$index}}_durata">
@@ -1375,6 +1467,58 @@
 											</div>
 											<div class="clr"></div>
 										</div>
+										<div class="data_table" >
+											<div class="orange">
+												<p>
+													<span></span>
+													<span>&nbsp;</span>
+													<span>&nbsp;</span>
+													<span class="DETAILS pull-right">
+														<span class="DETAILS_CostoIvaInclusa">{{DETUSOr.TOTUSO[0].CostoIvaInclusa}} $ </span>
+														<span class="DETAILS_Costo">{{DETUSOr.TOTUSO[0].Costo}} </span>
+													</span>
+													<div class="clr"></div>
+												</p>
+											</div>
+										</div>
+										<table class="table-striped table-condensed"  width="100%" >
+											<tr>
+												<th class="s3">{{DETUSOr.DETAILS[0].Pos01}}</th>
+												<th class="s5">{{DETUSOr.DETAILS[0].Pos02}}</th>
+												<!-- <th class="s4"><span class="lusopos03">{{DETUSOr.DETAILS[0].Pos03}}</span> <span class="if_kb hidden"> <span class="sx hidden">{{DETUSOr.DETAILS[0].Pos04}}</span> (Kbyte)</span></th> -->
+												<th class="s6 in_ex">Charge (Tax <span class="class_{{FILE.DOCUMENT[0].TEMPLATE[0].INVOICE[0].Class}}"></span>)</th>
+											</tr>
+											<tr ng-repeat="VUSOr in DETUSOr.DETAILS[0].DETAILLINE">
+												<td class="s7" style="text-align: left;">{{VUSOr.CDetLabel}}<em class="mms hid">{{VUSOr.flgMMS}}</em></td>
+												<td class="s8"  style="text-align: left;">
+													<span class="pos02 hidden">{{VUSOr.CDetQuantity}}</span>
+													<span class="pos03 hidden">{{VUSOr.CDetDuration}}</span>
+
+												</td>
+												<!-- <td class="s9"  style="text-align: right;">
+													<span class="pos02 hidden">{{VUSOr.CDetQuantity}}</span>
+													<span class="pos03 hidden">{{VUSOr.CDetDuration}}</span>
+													<span class="pos04 hidden">{{VUSOr.Pos04}}</span>
+												</td> -->
+												<td class="s10 "  style="text-align: right;">
+													<span class="pos12 hidden">{{VUSOr.Pos12}}</span>
+													<span class="pos13 hidden">{{VUSOr.Pos13}}</span>
+													<span class="pos14 hidden">{{VUSOr.CDetCharge}}</span>
+													<span class="pos15 hidden">{{VUSOr.CDetCharge}}</span>
+													<span class="pos16 hidden">{{VUSOr.Pos16}}</span>
+												</td>
+											</tr>
+											<tr class="CanaleBollClass4 hidden">
+												<td colspan="4">
+													<p style="font-size: smaller;"><br/>Il dettaglio dei consumi effettuati è disponibile nella MyYellowtel page, accessibile dal
+													sito www.doxee.com, alla voce "Vedi il Conto" del menù "Servizi per il tuo Business".
+													Sempre nella Sua pagina, sezione » Servizi Personali » GESTIONE ABBONAMENTO », potrà inoltre disporre di informazioni
+													aggiornate in continuo sul livello dei Suoi consumi effettivi.
+													<br/><br/>
+													</p>
+												</td>
+											</tr>
+										</table>
 									</div>
 									<a class="right show_hide_button" data-toggle="collapse" data-target="#{{$index}}_collapse_block">
 									  <span class="collapsed_text">Expand</span>
@@ -1579,7 +1723,7 @@
 										        <div class="clr"></div>
 												<div class="row"></div>
 												<div class="row" style="margin:0px;">
-													<div class="eight columns">
+													<div class="nine columns" style="width:61.5%">
 														<div style="padding-bottom: 2em;">
 															<div style="overflow: hidden;">
 																<div style="float: left; width: 5em;">
@@ -1602,19 +1746,42 @@
 															</div>
 														</div>
 													</div>
-													<div class="three columns"></div>
+													<style>
+													.met_contact_form input[type="button"] 
+													    {
+															border: medium none;
+															float: right;
+															font-size: 12px;
+															font-weight: 700;
+															min-width: 100px;
+															padding: 7px;
+															text-align: center;
+															transition: background-color 0.4s ease 0s;
+															background-color: rgb(0, 153, 241);
+															color:#fff;
+														}
+													</style>
+													
+													
+													<div class="three columns">
+														
+													</div>
+													
+												</div>
+												<div class="row">
+															
+															<div class="nine columns" style="width: 505px;">
+																<div style="padding-bottom: 1em; padding-top: 1.5em;">
+																  <form class="met_contact_form clearfix" action="?" method="post">
+																	<input type="button" class="met_bgcolor met_color2" value="SEND" name="submit">
+																 </form>	
+																</div>
+															</div>
+												</div>
 												
 												</div>
 												<div class="clr"></div>
-												<div class="row">
-													<div class="six columns">&nbsp;</div>
-													<div class="six columns">
-														<div style="padding-bottom: 1em; padding-top: 1.5em;">
-															<div style="display: inline-block; cursor: pointer; vertical-align: middle; text-align: center; border-radius: 0.5em; font-size: 1.2em; min-width: 8em; padding-left: 0.5em; padding-right: 0.5em; line-height: 2em; color: rgb(255, 255, 255); -webkit-user-select: none; background-color: rgb(0, 153, 241);">Submit</div>
-														</div>
-													</div>
-												</div>
-										</div>
+												
 								  
 								  </div>
 								</div>
@@ -1644,119 +1811,103 @@
 								<div class="clr"></div>
 							</div>
 							<div class="clr"></div>
+							<div class="table costi_rep">
 							
-							
-							
-							<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
-								
-								<tbody><tr>
-										  <td width="33%" valign="top" bgcolor="#FFFFFF"><table width="73%" border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="#FEFEFE">
-											<tbody><tr>
-											  <td height="40" align="left" valign="middle" bgcolor="#FFFFFF" class="heading">&nbsp;</td>
-											</tr>
+							<table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+								         <tbody>
 											<tr>
-											  <td height="40" align="left" valign="middle" bgcolor="#FFFFFF" class="heading">&nbsp;</td>
-											</tr>
-											<tr>
-											  <td height="40" align="left" valign="middle" bgcolor="#FFFFFF" class="heading">&nbsp;</td>
-											</tr>
-											<tr>
-											  <td width="172" height="25" align="left" valign="middle" bgcolor="#FFFFFF" class="topbord">&nbsp;</td>
-											</tr>
-											
-										  </tbody></table></td>
-										  <td width="1%" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
-										  <td width="66%" valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
-								<tbody><tr>
-								
-										  <td align="left" valign="top"><div align="right"><img src="bannercontactus.jpg" width="684" height="150" alt=""></div></td>
-										</tr>
-											<tr>
-												<td align="left" valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+												<td align="left" valign="top" bgcolor="#FFFFFF">
+												
+												
+												<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
 											<tbody><tr>
 													<td height="22" align="left" valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
 											<tbody><tr>
-													<td width="99%" height="25" colspan="2" valign="top" bgcolor="#FEFEFE" class="text"><table width="99%" border="0" align="left" cellpadding="0" cellspacing="0">
+													
+													<td width="100%" height="25" colspan="2" valign="top" bgcolor="#FEFEFE" class="text">
+													
+													<table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
 											<tbody><tr>
 													<td width="1" rowspan="4" valign="top" bgcolor="#FEFEFE" class="text"></td>
 													</tr>
+													
 													<tr>
-													<td height="5" colspan="4" valign="top" bgcolor="#FFFFFF" class="topbord"></td>
+													<td height="5" colspan="4" valign="top" bgcolor="#FFFFFF" class="topbord">
+													</td>
 													</tr>
+													
 													<tr>
-													<td height="112" valign="top" bgcolor="#FFFFFF"><p align="left"><span class="textblue2small"><strong>General   Enquiries:</strong></span><br>
-													255, First Floor<br>
-													Okhla Industrial Estate, Phase 3<br>
-													New Delhi 110 020, India.<br>
-													Tel: +91-11-4646 1700<br>
-													Fax: +91-11-4646 1701 <br>
-													<a href="mailto:mail@friendscolor.com" class="bluelink">mail@friendscolor.com</a></p>
-													<p align="left"><span class="text"><strong>Sales:</strong></span><br>
-													<a href="mailto:sales@friendscolor.com" class="bluelink">sales@friendscolor.com</a> <br>
-													<br>
-													<span class="text"><strong>Career   Opportunities:</strong></span> <br>
-													<a href="mailto:careers@friendscolor.com" class="bluelink">careers@friendscolor.com</a></p>                                    </td>
-													<td width="16" rowspan="2" valign="top" bgcolor="#FFFFFF"><img src="divider.jpg" width="5" height="250"></td>
-													<td></td>
-													<td width="400" rowspan="2" valign="top" bgcolor="#FFFFFF"><form action="thanks.php" method="post" name="contact" id="contact" onsubmit="return checkvalue()">
+													
+													<td height="112" valign="top" bgcolor="#FFFFFF">
+													<div class="basic-table-body"><div style="display: table-row; height: 2.2em;"><div style="display: table-cell; width: 2.5em; vertical-align: middle; border: 1px solid transparent;">
+													
+													<div style="padding-right: 0.5em; padding-top:10px">
+													<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABdRJREFUeNrcmg1oVWUYx9+7zXWddu/MNrPsgyDt0yESEkKjSDKKMgpNrJA+ZgrSh0kkggRqJPaF1WKZaUG4yIgVRElhNbGyb/pApDQcg7Zia7rd3Tvd7Xnod7gvt3Puzt3u3X23F/7cjXvuOe//PM/zfz7OiaTTaTOeV5kZ56si6ItIU49re43z+U+Yg9MNsTFhwQWCVkFK0AFOCY4Ito7Igg4Qe1FQI6j2+f4Cwb2CyYIHxhLBWYJdfHrE1HpJyOhK4Hn6/RLBgGC16yJzuuBdwUHBPDY/wHevCq4UVAomCC4SfApRPe5OwUaXCT6NcNwI0UE2v1swSbBKcEhwkvhrFywU7MeySvJRQa1rBOcLjgpWqGgTLt2CvcTY3YK+HL+/SdCmgik4TfC9oMoFgnrHPxC8LzgfK51AGW/AOh0hzpPEnQf5/0zBnlITfFLwFypZjdupBZoEFwq+yPN8fws24eIan1dxjZIQ3I6klwPd1Dsk8DUjOO8GwdvErZ5r5WgT1Gu0CBZjNXWt3wT1yPzxAlzjfm6ad71Zo0WwCrVbgEIqmQ8Flwp+KOB1zkBhDZ/TR4OgWutrwVxBFIV8S3ALybtQqxY1jlo1675iE1RF+1kwk+DXeNspuC/g+C1WMZ2vaP1BlRMhrWwudgzWIvnTiQtNAS8JHg44vgVh6MhWwBxLybyJaEVR4hRVzvpiElRyf1p3VC/6jGCdz7FRXOk6jq9kw82WYPgtLcB/FSwiDFQ9fxKcTZVTtDz4BO7iLc1x5yLj2UubtQPkrYm4cD8bvhkCNQGu3IZKer97T1BHTixaqaZ+/4jlLl3c0Y4AxftOcDlW66aDaOHvKK7WbsXTFEq4Bn7jVTJNpJp0MdulLVx4slUMzwm4o2qVXyCpN7eHTT5m3ai17KuC2FwF6QpcN4EVtZbtLPZM5lmSbByX/F0wO4CcxucxFLYMxdtmkTPEqlr+sOWycYrpcvLobtS5M8wGR0JQN7ecTaRIC3NxM7/4bGejhgJ5a7bisXTjl+CyvVi5j8JA+8J7CjJ0GmKp7C+1Sq9vUMOEz7EbSRGeMvbTReTqGE4RWzOwYJefQhaLoE0uQQdwvdWBZ8fnCkq2QVz3srDuRay1jbQQztctPXJ95LFrA8htIz5jxKcm/4vzIFeQlY8Fn2L+UU1s7KOrDmqNbse9kihnfYE6h6IQVHl/EJFIMKsMItdMVx7Dyl/hwilTghWW4AFLAY8yWvBzdx1DXG2NIT6heyjZChODO8hNXvlV71M5aNn0meAayPUwBiwpuTAWvEJwm1X3NfqIRByXnWmVXs1miImzCwQr6L5j5KUvBY9nHTNV8K3gHGvOsjNHa+QUwR0UuQaXXOxzzGFUNYJCNvrcBPcIRpp66mhboljlBeP/2Mrr+zQVvOwauVwis4fYGqRSWZ8j8feisCuNg6vMx3raIZxlFcVLc/x+jVXFaAw+7zRBIacu9xBS30vd2TXEORpJC6q0q63plpMW3G5ZpIvqZai1zroJAxB2j6BYbxrCMoFctiyP8+ziN5W49BQXLficNe84RGUSdm2ghPOUea2LBJcgFN1meA9D9lpiM9EpguKed1itTG+6IbZ/GOeaw2dqpE1qMSw4w7rrwyGnc8p5/J2kq3CKYMpkns7E8jxHOTWr93y9lRh2iuAR7rxhopXP0uJ6mnW+Zcah5RH83ErQcaqZMGsznb33eGxTiMJg9AmKqHhvN3ivZSwPkbBrUFs9XkeBH+WoWZ1IEzokOmgyE2VN2K8H/E5Luh+tvHnMNdf8H0GxYpKRQyvDIu0mFhmfVzOw9lT+VnGazzjD7W5CSJ4U6PP0jxkaqTIuZOh0nuBWrDybku44cddpHF2RoDd+RWjeQECqsVI/VrLf23zNpfFElrFyNry67jL/vQh3glw3yWSeIulstMVVcmE6em/pS251JvMynLriKybzLpnzK8zgV5/56TOFKpP75bixFYPjZY37t+7/FWAAiSBxyXluxqkAAAAASUVORK5CYII=" style="display: block; border-style: none; height: auto; width: 100%;"></div></div><div style="display: table-cell; width: auto; vertical-align: middle; border: 1px solid transparent;">
+													<br/>
+													<span style="font-weight: bold;">
+													212.225.8430</span></div></div><div style="display: table-row; height: 2.2em;"><div style="display: table-cell; width: auto; vertical-align: middle; border: 1px solid transparent;">
+													
+													<div style="padding-right: 0.5em; padding-top:10px">
+													
+													<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAy9JREFUeNrsmVFy2jAQhoUmz7VvEG6Ac4I4Jyg5Ac5LX0tOUOcEpa99iX2ChhPEnCBwgpoTFHoBKqWryXYrE0uWhc1YMzuDBTb6rN3Vr9XocDiwc26jAXAAHAC7CTj6/tv1f43B1sJ27/348OmDkz/lHl6ihCqE/RT2LOwXXIc+ZrBtwAhm7Jr0y+sSvu8tYAIzFaC+LfocwPfTPgKmwh4R3F7YDbjrLVwryB/C5n0CzIR9QdcbcMUCrp+ExdCv2le4r1NZNIMZoQnlkvRtKrKmTDKTGr99Ehl14RtQzsiLr7VMAI58u2jIetJcxOBKTngL1puFvvczeHaAMv4WPgcpEl7mCzCE9WzieSJmtpC8B3CNIHlP4KwhuSXcxjNYbgvJLeDyNsVxhZJJbCG5BVxyCt+0hTwGOCdw304F9w7kwhhQ3BQSN7z37ZYGkJ9hvEYzGJGd+NxHeaHmoh9pxhI1XSYuIR6jDsAZLVcXBs8PYA94x/4WjEwVEH45hQXcFDbZget1cIlqKAxqLSbJRtZnZKnwGVlp4g0CLoHaDa7xbF0BrqGGgh84s6zP2Lr8I/q8h/GUrgAVZGSoYDLyIvawOcYuXxh6w2sBS2TSdRtiewdvbkX6x6SEEWrgNvA7ef8V+7dsqHP5sAIuFnCl6xjUQeYadxsj9TMj6idmb9Uy5fJVcR1qktAS4HamyemC2bWExOIEBl7WlHZr9nZmMUGQUwgFXHrMYXH3XrJIYMnAMWWiW5U34Lj+SOAemsC5qMnIWHvQ9N/XTB4Kcql7hoBLT110ijQa9c6wZrMD18yphxzTmD4AlWwKCFzWwOUxpHT3oikkbzCYgiiLK9b8AIXGtYQsQYN6A0zY/0djMWRGFy3TJK/CFpJbwrGW4DDkDREEBWjS1gBTAqfO/VzDqY1tQQTBq+oxheQGb5QeatYWvA0gdUJfQqYuAecaXYmlF/MASYW+fNnXrgADqgl9wSFInepxrkX3EG9eik8VJ8xK1AcasaB/ju4IGxbX0rQ8cKK2EjMcG7kouERKtjRdbFsYJzOaQeQiIetIufDIUsKsAM+lDYAD4AA4ALba/ggwAJj2Lbs+7fpiAAAAAElFTkSuQmCC" style="display: block; border-style: none; height: auto; width: 100%;"></div></div><div style="display: table-cell; width: auto; vertical-align: middle; border: 1px solid transparent;">
+													<br/>
+													<span style="font-weight: bold;">info@fci-ccm.com</span></div></div><div style="display: table-row; height: 2.2em;"><div style="display: table-cell; width: auto; vertical-align: middle; border: 1px solid transparent;">
+													
+													<div style="padding-right: 0.5em; padding-top:10px">
+													
+													<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAgNJREFUeNrsmt1twjAQx5OI5zYbQCcgI2QD6AT4qa9lg2YD3vtS2CAbNGwQNoAJGrpAepbOkhWljvNhJzF3kkW+kPPD9/E/C78sS89lCzzHjQAJcOK2UN30P39NzBnCKHQeLN+eZrWCAuwHxtZFF41gPOPxfhIuqmFbfHEdW1WOk6Yv/BMi3AuO4L5abu6rCn1DDDIYXyPljguMWAeyj4uuRkyOaxgZLEBo2kWFnfmElhLVuwR5bEpYQwFmOjHV1urKBIaNgNzAOY9H5kyhBxiegU/SpR1AJk4pGVyxm3QpdgoQVoyXpmWldLgBiHByQrthyZo/IJaFVFJEd55FVfVwqCz6gWNoINXtOxb73FShL0ZeUNYE1xcwRclk23jMvQJcalpsX1sIbZHKvyXlE7vWD06vo6/RgQw/+4rztu0Sl2NX04Bc2G4G+mGXLbNu1HUXIBgBrmsXYcxFubjdSecnBLaxxXEwHYOsMslZJYumaIEiwFeVLYmLZ3E3zDhgzZYEm4B6MVoH994MLVCoiKzaOZvYlhi70DMJTnQN3E1zC+8W2QAUrsknW+P5wbUYLFAYX+YYg7pSrcASkXjdN3xDyQvuLd08MQ0o2qM+RV5ul3Jql0aogwRIgARIgARIgARIgI8LeJWOU1uTLiwDvmBXkdua1Kd//BIgARIgAfawPwEGABKvfR5DuImcAAAAAElFTkSuQmCC" style="display: block; border-style: none; height: auto; width: 100%;"></div></div><div style="display: table-cell; width: auto; vertical-align: middle; border: 1px solid transparent;">
+													<br/>
+													<span style="font-weight: bold;">www.fci-ccm.com</span></div></div><div style="display: table-row; height: 2.2em;"><div style="display: table-cell; width: auto; vertical-align: middle; border: 1px solid transparent;"><div style="padding-right: 0.5em;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA7NJREFUeNrsWt2R2jAQ9mXyHNwBpAK4CjAV4FRw5iWv4SrAVBDf670cdOCrIFBBTAURHUAaIKvMambZkWxjSzJz453ZYcYCSZ/22z/hh8vlEnxk+RR8cOkB9gB7gD1Ap/LZ5eQPr39H8BGBTlC57EAF+bySy/cv9wkQgCXwIXVa8VU6vgfdoNrbi81ED8CklbIawMrkgIdT3JUF0WpvmqF3pGCBNBRI15BQNwYd4PfHoL9BFzasacWCAE5u5Ik8OqMlpZ5qTBEiyIwAlfIMVsw6BagBJykWw8YEjN06nQSaM4ovYK5NJwA1tNzCZhIy3nRqfmiPMG/hNQ9iQDGCaykJMkFJY5q2SfR00UMJuBA3nGOwUZqCjkrmj9GX/6cTZIsfgLBYRPzkjJsxWUKgpef4G6Ur0D94UKHmt4Id4tKnBVNqSRlQNIeQIrBBxVw/0KKhgSXKimOsjNwCxEWmZf6BdFqxKuWbHEJ9lD5LxsdIYV6qndjz2IcFI5rEcRMUXMhAb/E3dKMF0nfByjadn+WGtZ0BnLBiWRccBsRySUU6WFf4GU0PI98ACwPAW8J7xqgaMpoKNu61HxSGtKCjl0lOaGndASo5dtLw6qKnIxGdAMRqpi6d635PVPSNzgEKAx11gadOck5IUDpXWOvsG2BkiIxKniqiKE8pmaFqKgtq1gHmZRREv3whj95Y5UMPRzDrZRV51z1AbFsUVeaY2HWlHO0GVhgtd+SC6Rcr42JDcxxX5F0nQaa0fMLqJmLhf0AK7SHzq5lu81gWqtx3hnnzLgCmBksrkAtmTQpsjdXJriQA3ZJT7XX0cLonQjHttQLr6EPis6JGbguZj85gDW8U5REvrVmxUB+skiUBd2gCzgZAFWyG2P/ZkpDlUP9XFuhjdBPLJg1pDesd29yqta1FNyRSDgI71+4j1iy3usiy8e9Swi6H2lKVHtK+qe9ZA4iVC/WRVY0ivIyaU1vWa5UmNCmhIEn5iCnhdCM1C+J7azi81oHL5h+glKrDBv64oWmhZurxBxBrVBpV50H9u8zUNjVdWFBFVdpJ/Ayqb8IiFjWfm3QNXgAiSGm1d1ZDTkoSOq0x922SuheAhGIHkh/zku6f9oOx7Y04AYhVDg86OwZyE1xfA0Y3Rt1OLaiCDrUIvZ5fBtf//y1s+p0XgISC/Hp+h8FHyTaw/GaFT4CKii8MJA0qicvFfb3ptGQgFbjY9cI+X+WSIL/iNcXMVVBxVoveq/RvG/YAe4A9QKfyT4ABAAXKQaIp3/esAAAAAElFTkSuQmCC" style="display: block; border-style: none; height: auto; width: 100%;"></div></div><div style="display: table-cell; width: auto; vertical-align: middle; border: 1px solid transparent;">
+													<br/>
+													<span style="font-weight: bold;">FCI CCM, Inc. 
+														   102 Madison Avenue
+														   New York, NY 10016 </span></div></div></div>
+													</td>
+													
+													<td width="16" rowspan="2" valign="top" bgcolor="#FFFFFF">
+														<img src="divider.jpg" width="5" height="300">
+													</td>
+													
+													
+													<td width="400" rowspan="2" valign="top" bgcolor="#FFFFFF">
                                      
-							<table width="100%" border="0" cellpadding="" cellspacing="">
+													<table width="100%" border="0" cellpadding="" cellspacing="">
+							
                                     <tbody>
+                                        									
                                         <tr bgcolor="#FFFFFF">
-                                            <td height="28" colspan="3">For all other enquiries, please use the form below:</td>
-                                        </tr>
-										
-                                        <tr bgcolor="#FFFFFF">
-                                            <td width="27%" height="46"><font color="#666666" size="2" face="Arial, Helvetica, sans-serif"><strong><font color="#FF0000">* </font><span class="text">Name: </span></strong></font>
-                                                <div align="left"><font color="#666666" size="2" face="Arial, Helvetica, sans-serif"><strong>
-                                                  <input type="text" name="name" style="WIDTH: 100px">
-                                                </strong></font></div></td>
-                                            <td width="25%"><p align="left"><font color="#666666" size="2" face="Arial, Helvetica, sans-serif"><strong><font color="#FF0000">* </font><span class="text">Phone<br>
-                                                </span>
-                                                        <input type="text" name="tel" style="WIDTH: 90px">
-                                            </strong></font></p></td>
-                                            <td width="48%"><font color="#666666" size="2" face="Arial, Helvetica, sans-serif"><strong><font color="#FF0000">* </font><span class="text">Email </span><br>
-                                                    <input type="text" name="email" style="WIDTH: 110px">
-                                            </strong></font></td>
-                                        </tr>
-										
-                                        <tr bgcolor="#FFFFFF">
-                                            <td height="34" colspan="3"><div align="left" class="text">Comments : </div>
-                                                <font color="#666666" size="2" face="Arial, Helvetica, sans-serif"><strong>
-                                                <textarea style="WIDTH: 320px" name="comments" rows="5"></textarea>
-                                              </strong></font><font color="#666666" size="2" face="Arial, Helvetica, sans-serif">&nbsp;</font></td>
-                                        </tr>
-										  
-                                        <tr>
-                                            <td height="32" colspan="3" align="right"><input type="submit" name="Submit" value="Submit">
-                                                <input type="reset" name="Submit2" value="Clear Fields">
-                                                <p></p></td>
+                                            <td width="27%" height="46"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.7762407109913!2d-73.9852301!3d40.7449489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a7daaa4279%3A0xfda099e74613727a!2s102+Madison+Ave%2C+New+York%2C+NY+10016%2C+USA!5e0!3m2!1sen!2sin!4v1444301903137" width="550" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></td>
                                         </tr>
 										
                                     </tbody>
 									
-                                      </table>
-                                  </form></td>
-                                </tr>
-                                <tr>
-                                  <td width="238" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
-                                  </tr>
-                            </tbody></table></td>
-                            <td width="1%" valign="top" bgcolor="#FEFEFE" class="text">&nbsp;</td>
-                          </tr>
+                            </table> <!-- image map in contact us page code-->
+                                  
+													</td>
+													
+													</tr>
+													
+													<tr>
+													  <td width="238" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
+													</tr>
+                            
+											</tbody>
+											
+													</table>
+													</td>
+													<td width="1%" valign="top" bgcolor="#FEFEFE" class="text">&nbsp;</td>
+													
+												    </tr>
                           
                       </tbody></table></td>
-                    </tr>
+												   </tr>
                     
                   </tbody></table></td>
-                </tr>
-              </tbody></table></td>
-            </tr>
-          </tbody></table>
-							
-							
-												
-							
+											</tr>
+										</tbody>
+							</table>
+           					
+							</div>		
 								<div class="clr"></div>
 								
 									<div ng-repeat="SERVICES02rep in SUBSCRIPTION.SERVICES02">
@@ -2555,7 +2706,7 @@ $(document).ready(function(){
 					},
 					tooltip: {
 						formatter: function() {
-							return 	this.point.name.toLowerCase()+' '+'calls: '+ this.point.y  ;
+							return 	this.point.name.toLowerCase()+' '+'Reading: '+ this.point.y  ;
 						}
 					}
 				},
@@ -2905,6 +3056,622 @@ $(document).ready(function(){
 			$(".main_nav>.nav.nav-tabs").css("height", content_height);
 		});
 		$("#container").addClass('visible');
+		
+		//****************
+		
+		$("select option:eq(1)").attr("selected", true);
+		$("select").on("change",function(){
+			$(".t_rep").each(function(){
+					var DETAILS = $(this).find(".DETAILS_det").text();
+					var mms = $(this).find(".mms").text();
+
+					if (
+						(Class == 5)&&(DETAILS == "07" || DETAILS == "18" || DETAILS == "19" || DETAILS == "29"|| DETAILS == "16"|| DETAILS == "25"|| DETAILS == "20"|| DETAILS == "08"|| DETAILS == "14"|| DETAILS == "24"|| DETAILS == "23"|| DETAILS == "12")
+					){
+						$(this).find(".DETAILS_Costo").remove()
+					}else if ((Class == 4)&&(DETAILS == "07" || DETAILS == "20" || DETAILS == "24" || DETAILS == "08"|| DETAILS == "14"|| DETAILS == "18"|| DETAILS == "23"|| DETAILS == "19"|| DETAILS == "29"|| DETAILS == "16"|| DETAILS == "25"|| DETAILS == "12")){
+						$(this).find(".DETAILS_CostoIvaInclusa").remove()
+					}
+
+					if(Class == 5){
+						$(".in_ex span").html('included');
+
+					}else if(Class == 4){
+						$(".in_ex span").html('excluded');
+					}
+
+					if($(this).find('h1').is(':contains("Dettaglio")')) {
+						$(this).closest('.table').remove();
+					}else if($(this).find('h1').is(':contains("SMS")')) {
+						$(this).find('.remove_chart_from_det_block').remove();
+					}else if($(this).find('h1').is(':contains("Traffico Dati")')) {
+						$(this).find('.remove_chart_from_det_block').remove();
+					}else if($(this).find('h1').is(':contains("Sintesi Servizi Poste Italiane")')) {
+						$(this).find('.remove_chart_from_det_block').remove();
+					}else{
+						$(this).find('h1').html()
+					}
+					if(DETAILS == "00" || DETAILS == "") {
+						$(this).closest('.table').remove();
+					}
+
+					if(
+						(Class == 5&&DETAILS == 24)
+					){
+						$(this).find('.data_table .s4 .if_kb').removeClass('hidden');
+
+						/*D32*/
+					}else if(
+						(Class == 4)&&(DETAILS == 24)
+					){
+						$(this).find('.data_table .s10 .pos16').removeClass('hidden');
+						$(this).find('.data_table .s9 .pos04').removeClass('hidden');
+						$(this).find('.data_table .s8 .pos02').removeClass('hidden');
+					}else if(
+						(Class == 5&&DETAILS == 25)
+					){
+						$(this).find('.data_table .s4 .if_kb').removeClass('hidden');/*D32*/
+						$(this).find('.data_table .s4 .if_kb .sx').removeClass('hidden');/*D32*/
+						$(this).find('.data_table .s4 .lusopos03').hide();
+
+					}else if(
+						(Class == 4)&&(DETAILS == 25)
+					){
+						$(this).find('.data_table .s4 .if_kb').removeClass('hidden');/*D32*/
+						$(this).find('.data_table .s4 .if_kb .sx').removeClass('hidden');/*D32*/
+						$(this).find('.data_table .s4 .lusopos03').hide();
+
+					}else{}
+
+					if(
+						(Class == 5)&&(DETAILS == 19)/*E41*/
+					){
+						$(this).find('.data_table .s10 .pos13').removeClass('hidden');/*D41*/
+						$(this).find('.data_table .s4,.data_table .s5').hide();/*D30*/
+						$(this).find('.data_table .s8,.data_table .s9').html('&nbsp');
+					}else if(
+						(Class == 4)&&(DETAILS == 19)/*E42*/
+					){
+						$(this).find('.data_table .s10 .pos13').removeClass('hidden');
+						$(this).find('.data_table .s9,.data_table .s8').html('&nbsp');
+						$(this).find('.data_table .s4,.data_table .s5').remove();/*D31*/
+					}else if(
+						(Class == 5)&&(DETAILS == 14||DETAILS == 29||DETAILS == 16)/*E43*/
+					){
+						$(this).find('.data_table .s10 .pos14').removeClass('hidden');
+						$(this).find('.data_table .s9 .pos02').removeClass('hidden');
+						$(this).find('.data_table .s8').html('&nbsp');
+
+						$(this).find('.data_table .s4').remove();/*D32*/
+
+					}else if(
+						(Class == 4)&&(DETAILS == 14||DETAILS == 29||DETAILS == 16)/*E44*/
+					){
+						$(this).find('.data_table .s10 .pos13').removeClass('hidden');
+						$(this).find('.data_table .s9 .pos02').removeClass('hidden');
+						$(this).find('.data_table .s8').html('&nbsp');
+
+						$(this).find('.data_table .s4').remove();/*D32*/
+					}else if(
+						(Class == 5&&(DETAILS == 07||DETAILS == 08||DETAILS == 12||DETAILS == 23||DETAILS == 20||DETAILS == 24&&mms == 1||DETAILS == 18))/*E45*/
+					){
+						$(this).find('.data_table .s10 .pos15').removeClass('hidden');
+						$(this).find('.data_table .totalCol .pos14').remove();
+						$(this).find('.data_table .s9 .pos03').removeClass('hidden');
+						$(this).find('.data_table .s8 .pos02').removeClass('hidden');
+						$(this).find('.table.hid.colls .pos03').remove();
+						$(this).find('.data_table .s9 .pos04').addClass('hidden');
+					}else if(
+						(Class == 4&&(DETAILS == 07||DETAILS == 08||DETAILS == 12||DETAILS == 23||DETAILS == 20||DETAILS == 24&&mms == 1||DETAILS == 18))/*E46*/
+					){
+						$(this).find('.data_table .s10 .pos14').removeClass('hidden');
+						$(this).find('.data_table .totalCol .pos15').remove();
+						$(this).find('.data_table .s9 .pos03').removeClass('hidden');
+						$(this).find('.data_table .s8 .pos02').removeClass('hidden');
+						$(this).find('.data_table .s9 .pos04').addClass('hidden');
+						$(this).find('.table.hid.colls .pos03').html('&nbsp');
+					}else if(
+						(Class == 5&&DETAILS == 24&&mms == 0)
+					){
+						$(this).find('.data_table .s10 .pos15').removeClass('hidden');
+						$(this).find('.data_table .totalCol .pos14').remove();
+						$(this).find('.data_table .s8 .pos02').removeClass('hidden');
+						$(this).find('.data_table .s9').html('&nbsp');
+					}else if(
+						(Class == 4&&DETAILS == 24&&mms==0)
+					){
+						$(this).find('.data_table .s10 .pos14').removeClass('hidden');
+						$(this).find('.data_table .totalCol .pos15').remove();
+						$(this).find('.data_table .s8 .pos02').removeClass('hidden');
+						$(this).find('.data_table .s9').html('&nbsp');
+					}else if(
+						(Class == 5)&&(DETAILS == 25)
+					){
+						$(this).find('.data_table .s10 .pos16').removeClass('hidden');
+						$(this).find('.data_table .s9 .pos04').removeClass('hidden');
+						$(this).find('.data_table .s8 .pos02').removeClass('hidden');
+						$(this).find('.data_table .s9 .pos03').addClass('hidden');
+					}else if(
+						(Class == 4)&&(DETAILS == 25)
+					){
+						$(this).find('.data_table .s10 .pos15').removeClass('hidden');
+						$(this).find('.data_table .totalCol .pos14').remove();
+						$(this).find('.data_table .s9 .pos04').removeClass('hidden');
+						$(this).find('.data_table .s8 .pos02').removeClass('hidden');
+					}else{}
+
+					if(Class == 4&&DETAILS == 24){
+						$(this).find('tr').each(function(){
+							if( $(this).find('.mms').text()==0){
+								$(this).find('.s9').html('&nbsp');
+							}
+						})
+					}
+
+
+					$(".service .table").each(function () {
+						var show_hide_id = $(this).find('.show_hide_button').attr('id');
+						$('#'+show_hide_id).click(function(){
+							if($(this).prevAll('.striped').find('.panel-collapse ').hasClass('in')){
+								$(this).prevAll('.striped').find('.panel-collapse ').collapse('hide');
+								$(this).addClass('collapsed');
+								$(this).each('.panel-collapse ').removeClass('in');
+							}else{
+								$(this).prevAll('.striped').find('.panel-collapse ').collapse('show');
+								$(this).removeClass('collapsed');
+								$(this).esch('.panel-collapse ').addClass('in');
+							}
+						});
+						var table_name = $(this).attr('name');
+						if (table_name == ""){
+							$(this).remove()
+						}
+					});
+					$('.consumption .data_table').each(function(){
+						var theTotal = 0;
+						$(this).find("td.totalCol").each(function () {
+
+
+							$("span", this).filter(function() { return ($(this).text().indexOf(',') > -1) }).each(function() {
+								var text = $(this).text();
+								$(this).text(text.replace(',', '.'));
+							});
+
+							var value = $(this).find('span').html();
+							$(this).html(value);
+							theTotal += parseFloat(value);
+						});
+						$(this).find(".result").html(theTotal);
+
+						if( $(this).find(".result").text() == 0){
+							$(this).find(".total").html('Costo (Tax inclusa) 0,00 $ ').css('color','#333');
+							$(this).find(".tab-pane.cost, li.cost").hide();
+						}else{
+							$(this).find(".total").remove();
+						}
+					});
+					$('.consumption .rowDataSd').each(function () {
+						if($(this).is(':contains(":")')){
+							var hms = $(this).html();
+							var splits = hms.split(':').length;
+							var a = hms.split(':');
+							if (splits == null){
+
+							}else if (splits == 1){
+								var seconds = 1000*((+a[0]));
+								$(this).html(seconds);
+							}
+							else if (splits == 2){
+								var seconds = 1000*((+a[0]) * 60 + (+a[1]));
+								$(this).html(seconds);
+							}
+							else if (splits == 3){
+								var seconds = 1000*((+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]));
+								$(this).html(seconds);
+							}
+						}else{
+
+						}
+
+					});
+				});
+				
+				var chart;
+				$('.consumption .collapse.data_table').each(function () {
+					var blockId = $(this).attr('id');
+					var tableId = $(this).find('table.colls').attr('id');
+					var chartId = $(this).find('.tab-pane.colls .chart').attr('id');
+					
+					var lineButId = $(this).find('.colls .icon.linechart_button').attr('id');
+					var barButId = $(this).find('.colls .icon.barchart_button').attr('id');
+					var pieButId = $(this).find('.colls .icon.piechart_button').attr('id');
+					var legendId = $(this).find('.colls .legend').attr('id');
+					chart = new Highcharts.Chart({
+						chart: {
+							renderTo: document.getElementById(chartId),
+							type: 'pie',
+							spacingLeft: 30,
+							spacingRight: 30
+						},
+						data: {
+							table: document.getElementById(tableId),
+							startColumn:0,
+							endColumn:2,
+						},
+						plotOptions: {
+							pie: {
+								animation: true,
+								allowPointSelect: true,
+								cursor: 'pointer',
+								dataLabels: {
+									enabled: true
+								},
+							}
+						},
+						legend:{
+							enabled: false
+						},
+						series: [{
+							size: "70%",
+							innerSize:"30%",
+							dataLabels: {
+								enabled: true,
+								formatter: function() {
+									return Math.round(this.percentage.toFixed(0)) + ' %';
+								},
+								distance: 10,
+								color:'black',
+								style: {
+									fontSize:'14px'
+								}
+							}
+						}],
+						 showInLegend: true,
+						title: {
+							text: null
+						},
+						yAxis: {
+						},
+						xAxis: {
+							lineWidth: 0
+						},
+						tooltip: {
+							formatter: function() {
+								return 	this.point.name.toLowerCase()+' '+'Reading: '+ this.point.y  ;
+							}
+						}
+					},
+					function (chart) {
+						var legend = $('#'+legendId);
+						$.each(chart.series[0].data, function (j, data) {
+							$(legend).append('<div class="item"><div class="symbol" style="background-color:'+data.color+'"></div><div class="serieName" id="">' + data.name + '</div></div>');
+						});
+						$('#'+ barButId).click(function () {
+							chart.series[0].update({
+								type: "bar",
+								dataLabels: {
+									enabled: false,
+								},
+								showInLegend: false,
+							});
+							chart.yAxis[0].update({
+								title:{
+									text:"Chiamate"
+								}
+							});
+							$(this).nextAll('.legend').hide();
+							$(this).nextAll('.icon').removeClass('active');
+							$(this).prevAll('.icon').removeClass('active');
+							$(this).addClass('active');
+						});
+						$('#'+ pieButId).click(function () {
+							chart.series[0].update({
+								type: "pie",
+								dataLabels: {
+									enabled: true,
+								},
+							});
+							chart.yAxis[0].update({
+								title:{
+									text:" "
+								}
+							});
+							$(this).nextAll('.legend').show();
+							$(this).nextAll('.icon').removeClass('active');
+							$(this).prevAll('.icon').removeClass('active');
+							$(this).addClass('active');
+
+						});
+						
+						$('#'+ lineButId).click(function () {
+							chart.series[0].update({
+								type: "line",
+								dataLabels: {
+									enabled: false,
+								},
+							});
+							chart.yAxis[0].update({
+								title:{
+									text:" "
+								}
+							}); 
+							$(this).nextAll('.legend').show();
+							$(this).nextAll('.icon').removeClass('active');
+							$(this).prevAll('.icon').removeClass('active');
+							$(this).addClass('active');
+							
+						});
+					});
+				});
+				$('.consumption .collapse.data_table').each(function () {
+					var blockId = $(this).attr('id');
+					var tableId = $(this).find('table.durata').attr('id');
+					var chartId = $(this).find('.tab-pane.durata .chart').attr('id');
+					
+					var lineButId = $(this).find('.durata .icon.linechart_button').attr('id');
+					var barButId = $(this).find('.durata .icon.barchart_button').attr('id');
+					var pieButId = $(this).find('.durata .icon.piechart_button').attr('id');
+					var legendId = $(this).find('.durata .legend').attr('id');
+					chart = new Highcharts.Chart({
+						chart: {
+							renderTo: document.getElementById(chartId),
+							type: 'pie',
+							spacingLeft: 30,
+							spacingRight: 30
+
+						},
+						data: {
+							table: document.getElementById(tableId),
+							startColumn:0,
+							endColumn:2,
+						},
+						plotOptions: {
+							pie: {
+								animation: true,
+								allowPointSelect: true,
+								cursor: 'pointer',
+								dataLabels: {
+									enabled: true
+								},
+
+							}
+						},
+						legend:{
+							enabled: false
+						},
+						series: [{
+							size: "70%",
+							innerSize:"30%",
+							dataLabels: {
+								enabled: true,
+								formatter: function() {
+									return Math.round(this.percentage.toFixed(0)) + ' %';
+								},
+								distance: 10,
+								color:'black',
+								style: {
+									fontSize:'14px'
+								}
+							}
+						}],
+						title: {
+							text: null
+						},
+						yAxis:{
+							labels: {
+								formatter: function() {
+									return Highcharts.dateFormat('%H:%M:%S', this.value);
+								}
+							}
+						},
+						xAxis: {
+							lineWidth: 0
+						},
+						tooltip: {
+							formatter: function() {
+								return 	this.point.name.toLowerCase()+' '+'duration: '+ Highcharts.dateFormat('%H:%M:%S', this.y)  ;
+							}
+						}
+					},
+					function (chart) {
+						var legend = $('#'+legendId);
+						$.each(chart.series[0].data, function (j, data) {
+							$(legend).append('<div class="item"><div class="symbol" style="background-color:'+data.color+'"></div><div class="serieName" id="">' + data.name + '</div></div>');
+						});
+						$('#'+ barButId).click(function () {
+							chart.series[0].update({
+								type: "bar",
+								dataLabels: {
+									enabled: false,
+								},
+								showInLegend: false,
+							});
+							chart.yAxis[0].update({
+								title:{
+									text:"Duration"
+								}
+							});
+							$(this).nextAll('.legend').hide();
+							$(this).nextAll('.icon').removeClass('active');
+							$(this).prevAll('.icon').removeClass('active');
+							$(this).addClass('active');
+						});
+						$('#'+ pieButId).click(function () {
+							chart.series[0].update({
+								type: "pie",
+								dataLabels: {
+									enabled: true,
+								}
+							});
+							chart.yAxis[0].update({
+								title:{
+									text:" "
+								}
+							});
+							chart.xAxis[0].update({
+								title:{
+									text: null
+								}
+							});
+							$(this).nextAll('.legend').show();
+							$(this).prevAll('.icon').removeClass('active');
+							$(this).addClass('active');
+						});
+						$('#'+ lineButId).click(function () {
+							chart.series[0].update({
+								type: "line",
+								dataLabels: {
+									enabled: false,
+								},
+							});
+							chart.yAxis[0].update({
+								title:{
+									text:" "
+								}
+							}); 
+							$(this).nextAll('.legend').show();
+							$(this).nextAll('.icon').removeClass('active');
+							$(this).prevAll('.icon').removeClass('active');
+							$(this).addClass('active');
+							
+						});
+					});
+				});
+				$('.consumption .collapse.data_table').each(function () {
+				var width = $( window ).width();
+				var blockId = $(this).attr('id');
+				var tableId = $(this).find('table.cost').attr('id');
+
+				var chartId = $(this).find('.tab-pane.cost .chart').attr('id');
+				
+				var lineButId = $(this).find('.cost .icon.linechart_button').attr('id');
+				var barButId = $(this).find('.cost .icon.barchart_button').attr('id');
+				var pieButId = $(this).find('.cost .icon.piechart_button').attr('id');
+				var legendId = $(this).find('.cost .legend').attr('id');
+				chart = new Highcharts.Chart({
+					chart: {
+						renderTo: document.getElementById(chartId),
+						type: 'pie',
+						spacingLeft: 30,
+						spacingRight: 30
+
+					},
+					data: {
+						table: document.getElementById(tableId),
+						startColumn:0,
+						endColumn:1,
+					},
+					plotOptions: {
+						pie: {
+							animation: true,
+							allowPointSelect: true,
+							cursor: 'pointer',
+							dataLabels: {
+						    enabled: true
+							},
+
+						}
+					},
+					legend:{
+						enabled: false
+					},
+					series: [{
+						size: "70%",
+						innerSize:"30%",
+						dataLabels: {
+							enabled: true,
+							formatter: function() {
+								return Math.round(this.percentage.toFixed(5)) + ' %';
+							},
+							distance: 10,
+							color:'black',
+							style: {
+								fontSize:'14px'
+							}
+						}
+					}],
+					title: {
+						text: null
+					},
+					yAxis: {
+					},
+					xAxis: {
+						lineWidth: 0
+					},
+					tooltip: {
+						formatter: function() {
+							if (this.y > 0) {
+								return 	this.point.name.toLowerCase()+' '+'Costo: '+ this.point.y  ;
+							}else return false;
+						}
+					}
+				},
+				function (chart) {
+					var legend = $('#'+legendId);
+					$.each(chart.series[0].data, function (j, data) {
+						$(legend).append('<div class="item"><div class="symbol" style="background-color:'+data.color+'"></div><div class="serieName">' + data.name + '</div></div>');
+					});
+
+					$('#'+ barButId).click(function () {
+						chart.series[0].update({
+							type: "bar",
+							dataLabels: {
+								enabled: false,
+							},
+						});
+						chart.yAxis[0].update({
+							title:{
+								text:"Costo"
+							}
+						});
+						$(this).nextAll('.legend').hide();
+						$(this).nextAll('.icon').removeClass('active');
+						$(this).prevAll('.icon').removeClass('active');
+						$(this).addClass('active');
+					});
+					$('#'+ pieButId).click(function () {
+						chart.series[0].update({
+							type: "pie",
+							dataLabels: {
+								enabled: true,
+							},
+							showInLegend: true
+						});
+						chart.yAxis[0].update({
+							title:{
+								text:" "
+							}
+						});
+						$(this).nextAll('.icon').removeClass('active');
+						$(this).prevAll('.icon').removeClass('active');
+						$(this).addClass('active');
+						$(this).nextAll('.legend').show();
+					});
+					
+					$('#'+ lineButId).click(function () {
+						chart.series[0].update({
+							type: "line",
+							dataLabels: {
+								enabled: false,
+							},
+						});
+						chart.yAxis[0].update({
+							title:{
+								text:" "
+							}
+						}); 
+						$(this).nextAll('.legend').show();
+						$(this).nextAll('.icon').removeClass('active');
+						$(this).prevAll('.icon').removeClass('active');
+						$(this).addClass('active');
+						
+					});
+
+				});
+			});
+		});
+		//**************
+		
 		clearInterval(intervalID);
 		
 		$(function(){
