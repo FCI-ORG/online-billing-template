@@ -29,7 +29,7 @@
     .container1 .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px;}
     .row                                        { margin-bottom: 15px; }
 	
-    .row1                                        { margin-bottom: 5px; }
+    .row1                                        { margin-bottom: 5px; font-size:11px; }
     /* Nested Column Classes */
     .column.alpha, .columns.alpha               { margin-left: 0; }
     .column.omega, .columns.omega               { margin-right: 0; }
